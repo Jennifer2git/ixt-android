@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/buttonLeftProjector"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="216dp"
+        android:text="@string/maintenance_reboot_left_projector"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/buttonSequence"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="482dp"
+        android:text="@string/maintenance_reboot_sequence"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/buttonAmplifier"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="389dp"
+        android:text="@string/maintenance_reboot_amplifier"
+        android:textSize="10pt"
+        android:visibility="gone"
+         />
+
+    <Button
+        android:id="@+id/buttonRightProjector"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="304dp"
+        android:text="@string/maintenance_reboot_right_projector"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/buttonBranch"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="567dp"
+        android:text="@string/maintenance_reboot_branch"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textViewSequenceStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="912dp"
+        android:layout_y="486dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textViewLeftProjectorStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="905dp"
+        android:layout_y="235dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/textViewRightProjectorStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="912dp"
+        android:layout_y="321dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textViewAmplifierStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="916dp"
+        android:layout_y="400dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/textViewBranchStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="914dp"
+        android:layout_y="580dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <!-- my custom -->
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/tv_reboot_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="580dp"
+            android:layout_marginTop="165dp"
+            android:padding="10dp"
+            android:text="@string/tv_reboot_prompt"
+            style="@style/InActiveText"
+            android:textSize="15sp"
+            android:background="@drawable/global_notification_bg"
+            />
+
+    <LinearLayout
+            android:id="@+id/ll_reboot_mozax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="255dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle">
+
+        <ImageButton
+                android:id="@+id/btn_reboot_mozax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_reboot_button"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/content_btn_on_off"
+
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/tv_reboot_mozax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_reboot_mozax"
+                style="@style/smallInActiveText"
+                android:textSize="20sp"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_reboot_onlineMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ll_reboot_mozax"
+            android:layout_marginLeft="800dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle">
+
+        <ImageButton
+                android:id="@+id/btn_reboot_sony"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_reboot_button"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/content_btn_on_off"
+
+                />
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/tv_reboot_sony"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_reboot_sony"
+                style="@style/smallInActiveText"
+                android:textSize="20sp"
+                />
+
+            </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_reboot_projectorL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ll_reboot_mozax"
+            android:layout_marginTop="375dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle">
+
+        <ImageButton
+                android:id="@+id/btn_reboot_projector1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_reboot_button"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/content_btn_on_off"
+
+                />
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/tv_reboot_projector1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_reboot_projector1"
+                style="@style/smallInActiveText"
+                android:textSize="20sp"
+                />
+            </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_reboot_projectorR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ll_reboot_projectorL"
+            android:layout_alignLeft="@id/ll_reboot_onlineMovie"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle">
+
+        <ImageButton
+                android:id="@+id/btn_reboot_projector2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_reboot_button"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/content_btn_on_off"
+
+                />
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/tv_reboot_projector2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_reboot_projector2"
+                style="@style/smallInActiveText"
+                android:textSize="20sp"
+
+                />
+</LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_reboot_hollywood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ll_reboot_projectorL"
+            android:layout_marginTop="510dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle">
+
+        <ImageButton
+                android:id="@+id/btn_reboot_hollywood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_reboot_button"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/content_btn_on_off"
+
+                />
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/tv_reboot_hollywood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/tv_reboot_hollywood"
+                style="@style/smallInActiveText"
+                android:textSize="20sp"
+                />
+            </LinearLayout>
+
+
+</RelativeLayout>

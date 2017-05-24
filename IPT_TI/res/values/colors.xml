@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <color name="glass_line">#2fDEDEDE</color>
+    <color name="electric_blue">#d1f0ff</color>
+    <color name="glass_gradient_start_color">#80000000</color>
+    <color name="glass_gradient_end_color">#FF111111</color>
+    <color name="blue">#40b2ec</color>
+    <color name="red">#FF0000</color>
+    <color name="gray_light">#99a6a4</color>
+    <!--
+    <color name="gray_light">#e5e6e7</color>
+    -->
+    <color name="gray_noaction2">#ffffdd</color>
+    <color name="gray_noaction">#99a6a4</color>
+    <color name="gray_light_catalogue">#e6e7e8</color>
+    <color name="gold">#f0bf59</color>
+    <color name="gray_deep">#3C454D</color>
+    <color name="night_blue">#3b4650</color>
+    <color name="midnight_blue">#191970</color>
+
+    <color name="color_line">#f0bf59</color>
+    <color name="color_actionable">#f0bf59</color>
+    <color name="color_noactionable_text">#e5e6e7</color>
+    <color name="color_noactionable_icon">#99a6a4</color>
+    <color name="color_lobby">#e5e6e7</color>
+    <color name="color_catalogue_bg">#e6e7e8</color>
+
+
+
+</resources>

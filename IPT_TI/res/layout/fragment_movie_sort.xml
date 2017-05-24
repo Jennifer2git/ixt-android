@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+	<include
+			android:id="@+id/layout_tab_movie_sort"
+			layout="@layout/vp_indicator">
+
+	</include>
+
+
+
+
+
+	<!--<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone">
+	<com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+			android:id="@+id/horizonlistview_movie_sort_subitem"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+	</com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+</LinearLayout> -->
+
+	<!--
+	<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_centerVertical="true"
+			android:gravity="center_vertical"
+			android:orientation="horizontal"
+			android:divider="@drawable/nav_global_diver_line"
+			android:showDividers="middle"
+			>
+
+	<com.imax.ipt.ui.layout.IPTTextView
+			android:id="@+id/txtTitleNav"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/nav_movie_sortText"
+			android:text="@string/titles_nav"
+			android:clickable="true"
+	        android:focusable="true"
+
+			/>
+
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/txtGenreNav"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/nav_movie_sortText"
+				android:text="@string/genres_nav"
+				android:clickable="true"
+		        android:nextFocusRight="@id/txtTitleNav"
+				/>
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/txtActorNav"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/nav_movie_sortText"
+				android:text="@string/actors_nav"
+				android:clickable="true"
+				android:nextFocusRight="@id/txtGenreNav"
+
+				/>
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/txtDirectorNav"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/nav_movie_sortText"
+				android:text="@string/directors_nav"
+				android:clickable="true"
+				/>
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/txtYearNav"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/nav_movie_sortText"
+				android:text="@string/years_nav"
+				android:clickable="true"
+				/>
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/txtFavouriteNav"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/nav_movie_sortText"
+				android:text="@string/favourites_nav"
+				android:clickable="true"
+				/>
+	</LinearLayout>
+ -->
+
+</RelativeLayout>

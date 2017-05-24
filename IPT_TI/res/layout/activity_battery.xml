@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ipt_gui_asset_bg" >
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/battery_stast"
+        android:textSize="30pt"  android:layout_alignParentLeft="true" android:layout_marginLeft="150dip"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/stat_sys_warning" android:layout_centerInParent="true"/>
+
+    <FrameLayout
+         android:id="@+id/statusNotificationLayout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</RelativeLayout>

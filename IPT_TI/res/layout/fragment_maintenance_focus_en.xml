@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+            android:id="@+id/rlayout_arrow_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_centerHorizontal="true"
+            >
+
+        <ImageView
+                android:id="@+id/img_arrow_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/arrow_control_bg"
+                android:visibility="invisible"
+                />
+
+
+        <ImageButton
+                android:id="@+id/btnRigth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_arrow_control"
+                android:layout_marginLeft="-40dp"
+                android:background="@drawable/selector_remote_arrow_rigth_button"
+                />
+
+        <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/selector_remote_arrow_left_button"
+                />
+        <ImageButton
+                android:id="@+id/btnUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_arrow_control"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/selector_remote_arrow_up_button"
+                />
+        <ImageButton
+                android:id="@+id/btnDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_arrow_control"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/selector_remote_arrow_down_button"
+                />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

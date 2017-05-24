@@ -1,0 +1,221 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ipt_gui_asset_bg"
+    android:paddingBottom="50dip"
+    android:paddingLeft="50dip"
+    android:paddingRight="50dip"
+    android:paddingTop="50dip" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="5" >
+
+                <ImageView
+                    android:id="@+id/imgPoster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowSpan="6"
+                    android:src="@drawable/ipt_gui_asset_poster_default_large" />
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtTitle"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_row="0"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="text|textCapSentences"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white" >
+                </EditText>
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/year"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtYear"
+                    android:layout_width="400dp"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white" />
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblRunningTime"
+                    android:layout_gravity="left"
+                    android:text="@string/running_time"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtRunningTime"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white" >
+                </EditText>
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblGenres"
+                    android:layout_gravity="left"
+                    android:text="@string/genres"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtGenres"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@android:color/white" />
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblRating"
+                    android:layout_gravity="left"
+                    android:text="@string/rating"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtRating"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textColor="@android:color/white" />
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblSynopsis"
+                    android:layout_gravity="left|top"
+                    android:text="@string/synopsis"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtSynopsis"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@android:color/white" />
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblActors"
+                    android:layout_gravity="left"
+                    android:text="@string/actors"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtActors"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="textCapWords|textMultiLine"
+                    android:textColor="@android:color/white" />
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:id="@+id/lblDirectors"
+                    android:layout_gravity="left"
+                    android:text="@string/directors"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/txtDirectors"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/edit_text_holo_dark"
+                    android:ems="10"
+                    android:inputType="textCapWords|textMultiLine"
+                    android:textColor="@android:color/white" />
+            </GridLayout>
+        </ScrollView>
+
+       <GridLayout
+            android:id="@+id/GridLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:columnCount="2"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:background="@drawable/selector_remote_arrow_left_button"
+                android:ems="10"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/previous"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:background="@drawable/selector_remote_arrow_rigth_button"
+                android:ems="10"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/next"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:background="@drawable/selector_back_button"
+                android:ems="10"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/back"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnLoad"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:background="@drawable/selector_menu_input_media_devices_button"
+                android:ems="10"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/begin_load"
+                android:textColor="@android:color/white" />
+
+        </GridLayout>
+    </FrameLayout>
+
+    <FrameLayout
+         android:id="@+id/statusNotificationLayout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true">
+    </FrameLayout>
+
+</RelativeLayout>

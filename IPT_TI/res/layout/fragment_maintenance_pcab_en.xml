@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+	<RelativeLayout
+			android:id="@+id/pcab_status"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+
+			>
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/txt_pcab_calibration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="175dp"
+				android:textAppearance="@style/InActiveText"
+				android:textSize="20sp"
+				android:text="@string/maintenance_pcab_calibration"
+				/>
+
+		<ImageView
+				android:id="@+id/calibrationImg"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="225dp"
+				android:src="@drawable/system_calibration_btn"/>
+
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="350dp"
+				android:layout_alignLeft="@id/txt_pcab_calibration"
+				android:textAppearance="@style/InActiveText"
+				android:textAlignment="textStart"
+				android:gravity="start"
+				android:textSize="20sp"
+				android:lineSpacingMultiplier="1.5"
+				android:text="@string/maintenance_pcab_prompt"
+				/>
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/calibrationLastTime0"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:layout_alignLeft="@id/txt_pcab_calibration"
+				android:layout_marginTop="470dp"
+				android:text="@string/maintenance_pcab_last_time"
+				android:textAppearance="@style/InActiveText"
+				android:textSize="20sp"/>
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/calibrationLastTime"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:layout_alignTop="@id/calibrationLastTime0"
+				android:layout_toRightOf="@id/calibrationLastTime0"
+				android:layout_marginLeft="30dp"
+				android:text="2015-01-24"
+				android:textAppearance="@style/InActiveText"
+				android:textSize="20sp"/>
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/calibrationNextTime0"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:layout_alignLeft="@id/txt_pcab_calibration"
+				android:layout_below="@id/calibrationLastTime0"
+				android:layout_marginTop="45dp"
+				android:text="@string/maintenance_pcab_next_time"
+				android:textAppearance="@style/InActiveText"
+				android:textSize="20sp"/>
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/calibrationNextTime"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:layout_alignTop="@id/calibrationNextTime0"
+				android:layout_toRightOf="@id/calibrationNextTime0"
+				android:layout_marginLeft="30dp"
+				android:text="2015-03-24"
+				android:textAppearance="@style/InActiveText"
+				android:textSize="20sp"/>
+
+
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/calibrationMail"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginTop="700dp"
+				android:layout_toRightOf="@id/calibrationNextTime"
+				android:text="@string/maintenance_pcab_status_mail"
+				android:textAppearance="@style/smallActiveText"
+				android:drawableLeft="@drawable/mail_log"
+				android:textSize="10sp"
+				android:visibility="invisible"
+				/>
+	</RelativeLayout>
+
+	 	<RelativeLayout
+			    android:id="@+id/pcab_calibration"
+			    android:layout_width="match_parent"
+			android:layout_height="match_parent"
+	            android:visibility="gone"
+			>
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_marginTop="165dp"
+				android:layout_centerHorizontal="true"
+				android:textAppearance="@style/smallActiveText"
+				android:textSize="20sp"
+				android:text="@string/maintenance_pcab_calibrating"
+				/>
+
+		<ProgressBar
+				android:layout_width="330dp"
+				android:layout_height="330dp"
+				android:layout_centerHorizontal="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginTop="220dp"
+				android:layout_marginRight="250dp"
+				android:indeterminateDuration="1200"
+				style="@style/mProgress_circle"
+				/>
+		<com.imax.ipt.ui.layout.IPTTextView
+				android:id="@+id/txtCountTime"
+				style="@style/ActiveText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="330dp"
+				android:layout_marginRight="330dp"
+				android:text="00:00"
+				android:textSize="76sp"
+				android:visibility="visible"
+				/>
+	</RelativeLayout>
+
+
+</RelativeLayout>

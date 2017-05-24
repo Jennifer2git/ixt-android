@@ -1,0 +1,29 @@
+<resources>
+    <dimen name="outerring_diameter">270dip</dimen>
+    <dimen name="image_logo_margin_left">220dp</dimen>
+    <dimen name="image_logo_margin_top">200dp</dimen>
+    <dimen name="txt_logo_margin_left">308dp</dimen>
+    <dimen name="txt_logo_margin_top">250dp</dimen>
+    <dimen name="menu_txt_size">17sp</dimen>
+
+    <!-- Menu -->
+    <!-- fragment_menu_library -->
+    <!-- MenuView -->
+    <dimen name="minWidth">130dp</dimen>
+    <dimen name="menuView_marginLeft">50dp</dimen>
+    <!-- txtTitle:Movies -->
+    <dimen name="txtTitle_marginLeft">60dp</dimen>
+    <dimen name="txtTitle_padding">5dp</dimen>
+
+    <!-- checkableMenu -->
+    <dimen name="checkableMenu_marginLeft">15dp</dimen>
+    <!-- checkableSubMenu -->
+    <dimen name="checkableSubMenu_width">100dp</dimen>
+    <dimen name="checkableSubMenu_marginTop">50dp</dimen>
+    <dimen name="checkableSubMenu_marginLeft">180dp</dimen>
+    <!-- searchFragment -->
+    <dimen name="txtSearch_width">380dp</dimen>
+    <dimen name="txtSearch_height">45dp</dimen>
+
+
+</resources>

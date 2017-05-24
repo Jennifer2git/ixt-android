@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/LinearLayout1"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_margin="10dp"
+              android:layout_gravity="center_horizontal"
+              android:gravity="center"
+              android:divider="@drawable/diver_line"
+              android:showDividers="middle"
+              android:orientation="horizontal"
+              tools:context=".StatusNotificationFragment">
+
+	<Button
+			android:id="@+id/btnFireAlarm"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:gravity="center_horizontal"
+			android:background="@drawable/ipt_gui_asset_notification_fire_alarm"
+			android:visibility="gone"/>
+
+	<Button
+			android:id="@+id/btnConnectionIpt"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:gravity="center_horizontal"
+			android:background="@drawable/global_wifi_not_connected_icn"
+			android:visibility="gone"/>
+
+	<Button
+			android:id="@+id/btnConnectionWifi"
+			android:layout_width="50dp"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:background="@drawable/global_wifi_not_connected_icn"
+			android:visibility="gone"/>
+
+	<Button
+			android:id="@+id/btnPowerOutage"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:background="@drawable/global_low_power_icn"
+			android:visibility="gone"/>
+
+	<Button
+			android:id="@+id/btnBatteryLow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:background="@drawable/global_low_power_icn"
+			android:visibility="gone"/>
+
+</LinearLayout>

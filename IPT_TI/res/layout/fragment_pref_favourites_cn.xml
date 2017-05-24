@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/IPTTextView04"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="571dp"
+        android:layout_y="138dp"
+        android:text="@string/lable_movie"
+        android:textSize="8pt"
+        android:visibility="gone"
+         />
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/lable_name"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="720dp"
+        android:layout_y="138dp"
+        android:text="@string/lable_movie_favourite"
+        android:textSize="8pt"
+        android:visibility="gone"
+         />
+
+        <ImageView
+        android:id="@+id/lable_name_view"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="780dp"
+        android:layout_y="130dp"
+        android:text="@string/lable_movie_favourite"
+        android:textSize="8pt"
+        android:src="@drawable/right"
+        android:visibility="gone"
+         />
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/lable_favourite"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="820dp"
+        android:layout_y="138dp"
+        android:text="@string/lable_movie_favourite"
+        android:textSize="8pt"
+        android:visibility="gone"
+         />
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/lable_mine"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="820dp"
+        android:layout_y="168dp"
+        android:text="@string/lable_movie_my"
+        android:textSize="8pt"
+        android:visibility="gone"
+        />
+
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/IPTTextView02"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="571dp"
+        android:layout_y="231dp"
+        android:text="@string/clear_all_music"
+        android:textSize="8pt"
+            android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btnClearTvChannels"
+        android:layout_width="51dp"
+        android:layout_height="54dp"
+        android:layout_x="730dp"
+        android:layout_y="305dp"
+        android:background="@drawable/ipt_gui_asset_alpha_slider_circle"
+        android:text="@string/go"
+        android:textColor="#ffffff"
+        android:textSize="6pt"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="490dp"
+            android:layout_marginTop="168dp"
+            android:orientation="horizontal"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle">
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/IPTTextView03"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/clear_all_movies"
+                android:textSize="16sp" />
+        <ImageButton
+                android:id="@+id/btnClearFavoriteMovies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@drawable/system_fav_clear_icn"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="490dp"
+            android:layout_marginTop="235dp"
+            android:orientation="horizontal"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle"
+            android:visibility="gone">
+        <ImageButton
+                android:id="@+id/btnClearFavoriteMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@drawable/system_fav_clear_icn"
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/IPTTextView01"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/clear_all_music"
+                android:textSize="16sp"
+                />
+    </LinearLayout>
+
+</RelativeLayout>

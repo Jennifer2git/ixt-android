@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Generic button responses -->
+	<string name="response_ok">OK</string>
+	<string name="response_yes">Yes</string>
+	<string name="response_no">No</string>
+
+	<string name="app_name">IMAX Private Theatre</string>
+	<string name="search">Search</string>
+	<string name="search_titles">Search Titles</string>
+	<string name="search_actors">Search Actors</string>
+	<string name="search_directors">Search Directors</string>
+	<string name="search_albums">Search Albums</string>
+	<string name="search_artist">Search Artist</string>
+	<string name="search_favourites">Search Favourites</string>
+	<string name="search_genres">Search Genres</string>
+	<string name="search_settings">Search Settings</string>
+	<string name="search_years">Search Years</string>
+
+	<!-- Content Images Description -->
+	<string name="content_master_menu">Master Menu</string>
+	<string name="content_btn_on_off">On/Off</string>
+
+	<!-- Media Library Menu -->
+	<string name="movie">Movie</string>
+	<string name="movies">MY MOVIES</string>
+	<string name="titles">TITLE</string>
+	<string name="title">Title:</string>
+	<string name="rating">Rating</string>
+	<string name="genres">GENRE</string>
+	<string name="actors">ACTOR</string>
+	<string name="directors">DIRECTOR</string>
+	<string name="years">YEAR</string>
+	<string name="year">Year</string>
+	<string name="favourites">FAVORITE</string>
+	<string name="overview">Overview</string>
+
+	<!--
+		<string name="movie">Movie</string>
+	<string name="movies">Movies</string>
+	<string name="titles">Titles</string>
+	<string name="title">Title:</string>
+	<string name="rating">Rating</string>
+	<string name="genres">Genres</string>
+	<string name="actors">Actors</string>
+	<string name="directors">Directors</string>
+	<string name="years">Years</string>
+	<string name="year">Year</string>
+	<string name="favourites">Favourites</string>
+	<string name="overview">Overview</string>
+	-->
+
+	<string name="titles_nav">TITLE</string>
+	<string name="genres_nav">GENERE</string>
+	<string name="actors_nav">ACTOR</string>
+	<string name="directors_nav">DIRECTOR</string>
+	<string name="years_nav">YEAR</string>
+	<string name="favorites_nav">FAVOURITE</string>
+
+
+	<!-- Music Library -->
+	<string name="albums">Albums</string>
+	<string name="artists">Artists</string>
+
+	<!-- Master Menu -->
+	<string name="menu">Menu</string>
+	<string name="inputs">Inputs</string>
+	<string name="settings">SETTINGS</string>
+	<string name="rooms">Rooms</string>
+	<string name="preferences">PREFERENCES</string>
+	<string name="maintenance">MAINTENANCE</string>
+	<string name="gaming">EXTERNAL INPUT 1</string>
+	<string name="gaming2">GAME</string>
+	<string name="music">Music</string>
+	<string name="tv">Online Movie</string>
+	<string name="online_movie">ONLINE MOVIE</string>
+	<string name="media_devices">HOME PREMIERE</string>
+	<string name="imax">HOME PREMIERE</string>
+	<string name="security_cam">KARAOKE</string>
+	<string name="curtains">Curtains</string>
+	<string name="battery_stast">Battery is low</string>
+	<string name="server_conection_problem">Server Connection Problem</string>
+	<string name="lighting">LIGHTING CONTROLS</string>
+	<string name="lighting_mode">LIGHT MODE</string>
+	<string name="lighting_color_set">COLOR PRESET</string>
+	<string name="lighting_settings">LIGHTING SETTINGS</string>
+	<string name="climate">Climate</string>
+
+	<!-- Dialog Media Description -->
+	<string name="synopsis">Synopsis:</string>
+	<string name="director">Director:</string>
+	<string name="minutes">Minutes</string>
+	<string name="rated">Rated:</string>
+	<string name="play_album">Play Album</string>
+
+	<string name="movie_actors">Actors:</string>
+	<string name="movie_type">Genre:</string>
+	<string name="movie_time">Time：</string>
+	<string name="movie_year">Year：</string>
+	<!-- Media Item Default -->
+	<string name="media_default">media title</string>
+
+	<!-- Movie Remote Simple -->
+	<!--<string name="now_playing">Now Playing:&#160;</string> -->
+
+	<string name="now_playing">NOW PLAYING:&#160;</string>
+	<string name="ok">&#160;OK</string>
+	<string name="movie_menu">Movie Menu</string>
+	<!--    <string name="previous_menu">Previous Menu</string>
+ -->
+	<string name="previous_menu">System Menu</string>
+	<string name="pop_up_menu">&#160;Pop-Up Menu</string>
+	<string name="audio_language">Audio Language</string>
+	<string name="subtitles">Subtitles</string>
+	<string name="multiview">Others</string>
+
+	<!-- Mozax Remote Control -->
+	<string name="options_menu">Options</string>
+
+	<!-- TV Remote -->
+	<string name="ch">CH</string>
+	<string name="prev_ch">PREV.CH</string>
+	<string name="clear">CLEAR</string>
+	<string name="enter">ENTER</string>
+	<string name="guide">GUIDE</string>
+	<string name="info">INFO</string>
+	<string name="rec">REC</string>
+	<string name="exit">EXIT</string>
+
+	<!-- Media Dialog -->
+	<string name="favourite">FAVORITE</string>
+
+	<!-- Add Media -->
+	<string name="watch_movie">WATCH MOVIE NOW</string>
+	<string name="disc_insert_note">A DISC HAS BEEN INSERTED \n WHAT WOULD YOU LIKE TO DO ?</string>
+	<string name="add_movie_library">ADD TO LIBRARY</string>
+	<string name="add_music_album_library">Add Album to Library</string>
+	<string name="do_nothing">DO NOTHING</string>
+
+	<!-- Add Media Dialogs -->
+	<string name="add_media_please_try_again_later">Please try again later.</string>
+	<string name="add_media_loading_in_progres">Loading in Progress!</string>
+	<string name="add_media_stop_playing_and_start_loading">Stop playing and start loading?</string>
+	<string name="add_media_media_playing_in_progress">Media playing in progress!</string>
+	<string name="add_media_check_disc_drive">Please check the disc drive.</string>
+	<string name="add_media_no_disc_detected">No disc detected</string>
+
+	<!-- Ligthing -->
+	<string name="all_on">All On</string>
+	<string name="house_ligths">House Ligths</string>
+	<string name="morning">Morning</string>
+	<string name="evening">Evening</string>
+	<string name="lounge">Lounge</string>
+	<string name="party">Party</string>
+	<string name="pre_show">Pre-Shown</string>
+	<string name="fanhhrenheit">ºF</string>
+	<string name="celsius">ºC</string>
+
+	<!-- Multi-View -->
+	<string name="layouts">Layouts</string>
+
+	<!-- Rooms -->
+	<string name="curtains_not_avalaible">Curtains are not avalaible</string>
+	<!--
+		<string name="count_down_power_on">&#160;&#160;&#160;&#160;&#160;Please stand by while your \n IMAX Private Theatre&#8482;&#160;Palais
+		powers on &#8230;</string>
+	<string name="count_down_power_off">&#160;&#160;&#160;&#160;&#160;Please stand by while your \n IMAX Private Theatre&#8482;&#160;Palais
+		powers off &#8230; \n Please do not shut down the power !</string>
+	-->
+	<string name="power_on_msg">THE SYSTEM IS POWERING ON \n PLEASE WAIT...</string>
+	<string name="power_off_msg">THE SYSTEM IS POWERING OFF, IT WILL TAKE ABOUT 5 MINS \n PLEASE DO NOT SHUT DOWN THE POWER !</string>
+	<string name="count_down_power_on">&#160;&#160;&#160;&#160;&#160;Please stand by while system powers on &#8230;</string>
+	<string name="count_down_power_off">&#160;&#160;&#160;&#160;&#160;Please stand by while system powers off &#8230; \n Please do not shut down the power !</string>
+	<string name="power_device_not_connected">Power Control Device Not Connected</string>
+
+	<!-- Maintenance -->
+	<string name="calibration">DUAL PCAB</string>
+	<string name="focus">FOCUS</string>
+	<string name="projector">PROJECTOR</string>
+	<string name="reboot_devices">REBOOT DEVICES</string>
+	<string name="version">VERSION</string>
+	<string name="login_info">ENTER AN ADMINISTRATOR PASSWORD.</string>
+	<string name="login_infoBake">PLEASE ENTER AN ADMINISTRATOR PASSWORD TO ACCESS THIS AREA.</string>
+	<string name="loading">Loading...</string>
+
+	<!-- Maintenance -->
+	<string name="projector_left">LEFT</string>
+	<string name="projector_right">RIGHT</string>
+
+	<!-- Gamming -->
+	<string name="console">Console</string>
+
+	<!-- CountDown -->
+	<string name="cancel">Cancel</string>
+
+	<string-array name="alphabet">
+		<item>A</item>
+		<item>B</item>
+		<item>C</item>
+		<item>D</item>
+		<item>G</item>
+		<item>H</item>
+		<item>I</item>
+		<item>J</item>
+		<item>L</item>
+		<item>M</item>
+		<item>N</item>
+		<item>O</item>
+		<item>P</item>
+		<item>Q</item>
+		<item>R</item>
+		<item>S</item>
+		<item>T</item>
+		<item>U</item>
+		<item>V</item>
+		<item>W</item>
+		<item>X</item>
+		<item>Y</item>
+		<item>Z</item>
+	</string-array>
+
+	<!-- Preferences -->
+	<string name="general">GENERAL</string>
+	<string name="touch_panel_1">TOUCH PANEL\'S SLEEP TIME</string>
+	<string name="touch_panel_2">Minutes</string>
+	<string name="lighting_delay_time_1">SET LIGHTS\' DELAY TIME</string>
+	<string name="lighting_delay_time_2">Seconds</string>
+	<string name="check_software_update">Check for software update</string>
+	<string name="dialog_title_software_update_available">Software update available</string>
+	<string name="dialog_message_software_update_available">Download and install software update?</string>
+	<string name="dialog_message_software_update_force">This is an important update, if give up,the system may not work well, please press OK to finish update.</string>
+	<string name="dialog_message_no_software_update_available">No software update is currently availalble.</string>
+	<string name="imax_preshow">IMAX Pre-Show plays before every movie</string>
+	<string name="default_control">Default media remote control complexity</string>
+	<string name="scan_new_cover">Scan for new cover art [Movies and Music Libraries]</string>
+	<string name="go">Go</string>
+	<string name="default_lighting_preset">Default Lighting Preset -</string>
+	<string name="event_lighting_not_set">Not set</string>
+	<string name="light_setting">SET THE CUSTOM LIGHTING</string>
+
+	<!-- Favourites -->
+	<string name="clear_all_movies">CLEAR ALL FAVORITE MOVIE</string>
+	<string name="clear_all_music">CLEAR ALL FAVORITE MUSIC</string>
+	<string name="clear_all_channels">Clear all Favourite TV Channels</string>
+	<string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+		has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+		and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+		electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+		Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+		PageMaker including versions of Lorem Ipsum
+	</string>
+	<string name="source">Source</string>
+	<string name="curtain_open">Open</string>
+	<string name="curtain_close">Close</string>
+	<string name="climate_fan_on">On</string>
+	<string name="climate_fan_auto">Auto</string>
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="running_time">Running Time</string>
+	<string name="previous">Previous</string>
+	<string name="next">Next</string>
+	<string name="back">Back</string>
+	<string name="begin_load">Begin Load</string>
+	<string name="video_format">Video Format</string>
+	<string name="ir_not_configured">Remote control of device is not supported or configured. Please use the
+		manufacturer\'s remote.
+	</string>
+
+	<!-- Maintenance -->
+	<string name="maintenance_reboot_left_projector">Reboot Left Projector</string>
+	<string name="maintenance_reboot_right_projector">Reboot Right Projector</string>
+	<string name="maintenance_reboot_sequence">Reboot Sequence</string>
+	<string name="maintenance_reboot_branch">Reboot Branch</string>
+	<string name="maintenance_reboot_amplifier">Reboot Amplifier</string>
+	<string name="connecting_to_ipt_server">Connecting to the server</string>
+	<string name="please_wait">Please wait ...</string>
+	<string name="movie_started">Prepare to Play ...</string>
+
+	<string name="maintenance_pcab_prompt">Tap to start system calibration.\n(This will take about 15mins.)
+	</string>
+	<string name="maintenance_pcab_calibration">SYSTEM CALIBRATION</string>
+	<string name="maintenance_pcab_last_time">LAST COMPLETED CALIBRATION:</string>
+	<string name="maintenance_pcab_last_time2">Last system calibration completed:</string>
+	<string name="maintenance_pcab_next_time">NEXT RECOMMENDED CALIBRATION:</string>
+	<string name="maintenance_pcab_next_time2">Next recommended system calibration:</string>
+	<string name="maintenance_pcab_status_mail">Send status to IMAX</string>
+
+	<string name="maintenance_projector_used">H USED</string>
+	<string name="maintenance_projectorL">LEFT</string>
+	<string name="maintenance_projectorR">RIGHT</string>
+	<string name="maintenance_projector_bulb">PROJECT LIGHTBULBS</string>
+	<string name="maintenance_projector_prompt">900 HOURS USE LEFT</string>
+	<string name="maintenance_projector_prompt2">The projector bulbs will need to be replaced \n
+		after about 900 more hours of use.
+	</string>
+	<string name="maintenance_projector_time">(Based on avaverage bulb life of 1000 hours)</string>
+
+
+	<string name="zaxel">Zaxel</string>
+	<string name="zaxel_describ">DEMO MODE</string>
+	<string name="zaxel_prompt">Add playlist</string>
+	<string name="zaxel_cancel">Cancel</string>
+	<string name="zaxel_ok">OK</string>
+	<string name="zaxel_playList">PlayList</string>
+	<string name="zaxel_clipList">ClipList</string>
+
+
+	<!-- Power States -->
+	<string name="powerstate_notset">Not Set</string>
+	<string name="powerstate_on">On</string>
+	<string name="powerstate_poweringoff">Powering Off</string>
+	<string name="powerstate_off">Off</string>
+	<string name="powerstate_poweringon">Powering On</string>
+	<string name="power_on">POWER ON</string>
+	<string name="power_off">POWER OFF</string>
+
+	<!-- Apk update -->
+	<string name="apk_update_downloading">Downloading new version IPT application, please wait ...</string>
+	<string name="control_type_full">Full</string>
+	<string name="control_type_simple">Simple</string>
+
+	<string name="toast_long_press_to_power_on">PRESS AND HOLD TO POWER ON</string>
+	<string name="toast_long_press_to_power_off">PRESS AND HOLD TO POWER OFF</string>
+	<!--
+	<string name="toast_long_press_to_power_on2"> Press and hold to power on</string>
+	<string name="toast_long_press_to_power_off2">Press and hold to power off</string>
+	-->
+
+	<!-- Home Premiere -->
+	<string name="toast_hp_app_no">Can not find the HomePremiere APP. Please make sure it be installed.</string>
+	<string name="toast_device_no">No device to show. Please restart the application.</string>
+
+	<!-- sony -->
+	<string name="sony_menu_back">Back</string>
+	<string name="sony_menu_option">Option</string>
+	<string name="sony_menu_master">Master Menu</string>
+	<string name="sony_menu_netvideo">Network Video</string>
+	<string name="sony_menu_display">Display</string>
+
+	<!-- oppo -->
+	<string name="oppo_menu_back">Back</string>
+	<string name="oppo_menu_option">PopupMenu</string>
+	<string name="oppo_menu_master">MasterMenu</string>
+
+	<!-- added -->
+	<string name="external_input_karaoke">EXTERNAL INPUT 2</string>
+	<string name="external_input_karaoke2">KARAOKE</string>
+	<string name="external_input_karaoke_prompt">Please use the controller of Karaoke</string>
+	<string name="external_input_prompt">Please use the controller of input equipment</string>
+	<string name="gaming_prompt">Please use the controller of game machine</string>
+	<!-- External Input -->
+	<string name="external_input">EXTERNAL INPUT 3</string>
+
+	<string name="warning_wifi_not_connected">WIFI IS NOT AVAILABLE</string>
+	<string name="warning_pc_not_connected">PLEASE CHECK THE CONNECTION TO THE PC</string>
+	<string name="warning_restart_app_prompt">IMAX Private Theatre is not running. Please start it and try again.</string>
+	<!--<string name="warning_restart_app_prompt">IMAX Private Theatre IS NOT RUNNING, PLEASE START IT AND TRY AGAIN.</string>-->
+
+	<string name="private_theatre">Private Theatre Palais</string>
+
+	<string name="tv_reboot_mozax">LOCAL MOVIE</string>
+	<string name="tv_reboot_sony">ONLINE MOVIE</string>
+	<string name="tv_reboot_onlie_movie">ONLINE MOVIE</string>
+	<string name="tv_reboot_hollywood">HOME PREMIERE</string>
+	<string name="tv_reboot_projector1">PROJECTOR1</string>
+	<string name="tv_reboot_projector2">PROJECTOR2</string>
+
+	<string name="tv_reboot_prompt">&#160;&#160;&#160;&#160;PRESS AND HOLD TO REBOOT EACH DEVICES&#160;&#160;&#160;&#160;</string>
+	<string name="tv_reboot_prompt2">Press and hold a power button for 5 seconds to reboot that device.</string>
+
+	<string name="zoom">ZOOM</string>
+	<string name="zoom_normal">NORMAL</string>
+	<string name="zoom_wide">WIDE</string>
+
+	<string name="off">Off</string>
+	<string name="on">On</string>
+
+	<string name="maintenance_pcab_calibrating">CALIBRATING...</string>
+
+	<string name="lable_movie">Label for Favourites Movie colletion：</string>
+	<string name="lable_movie_favourite">FAVORITES</string>
+
+	<string name="light_scene_movie">Default Lighting Preset-Movies</string>
+	<string name="light_scene_music">Default Lighting Preset-Music</string>
+	<string name="light_scene_gaming">Default Lighting Preset-Gaming</string>
+	<string name="light_scene_nothing">Default Lighting Preset-Nothing Playing</string>
+	<string name="light_scene_general">Default Lighting Preset-General</string>
+
+	<string name="light_scene_movie_light">Movie</string>
+	<string name="light_scene_music_light">Lounge</string>
+	<string name="light_scene_gaming_light">Evening</string>
+	<string name="light_scene_nothing_light">House Lights</string>
+	<string name="light_scene_general_light">Movie</string>
+
+	<string name="pcab_calibrating_prompt">Now, in the picture
+		quality optimizing stage, please waiting, complete:
+	</string>
+
+	<string name="calibration_done">Calibration Done</string>
+
+	<string name="pwd_invalid">PASSWORD INVALID</string>
+	<string name="pwd_valid">YOU ARE LOG IN</string>
+	<string name="prompt_warning">WARNING</string>
+	<string name="prompt_ac_poweroff">PLEASE CHECK THE POWER SUPPLY SYSTEM OF THE PRIVATE THEATER!</string>
+	<string name="prompt_note">NOTE</string>
+	<string name="prompt_ac_3D">THE SYSTEM IS GOING TO SWITCH TO 3D MODE, PLEASE TAKE THE GLASS.</string>
+	<string name="prompt_ac_2D">THE SYSTEM IS GOING TO SWITCH TO 2D MODE.</string>
+	<string name="prompt_ac_system_problem">THERE IS A PROBLEM WITH THE POWER SYSTEM,PLEASE CONTACT THE SERVICE STAFF.THANK YOU VERY MUCH!
+	</string>
+	<string name="prompt_ac_fire_alarm">FIRE ALARM!!!   FIRE ALARM!!!   FIRE ALARM!!!  </string>
+
+	<string name="menu_name_settings">SETTINGS</string>
+	<string name="menu_name_movie">LOCAL MOVIES</string>
+	<string name="menu_name_light">LIGHTING</string>
+	<string name="menu_name_game">GAME INPUT</string>
+	<string name="menu_name_karaoke">KARAOKE INPUT</string>
+	<string name="menu_name_extender">EXTERNAL INPUT</string>
+	<string name="menu_name_online_movie">ONLINE MOVIES</string>
+	<string name="menu_name_imax">HOME PREMIERE</string>
+
+	<string name="others">OTHERS</string>
+	<string name="other_version">ABOUT PRODUCT</string>
+	<string name="other_version_pc">CONTROL PC SOFTWARE VERSION:</string>
+	<string name="other_version_amx">NETLINX SOFTWARE VERSION:</string>
+	<string name="other_version_android">APP SOFTWARE VERSION:</string>
+	<string name="other_version_sn">PRODUCT SERIAL NUMBER:</string>
+	<string name="other_version_hardware">SYSTEM HARDWARE VERSION:</string>
+	<string name="other_version_update">CHECK NEW VERSION APP</string>
+	<!--
+	<string name="other_version_pc">Control PC software version:</string>
+	<string name="other_version_amx">NetLinx software version:</string>
+	<string name="other_version_android">App software version:</string>
+	<string name="other_version_sn">Product serial number:</string>
+	<string name="other_version_hardware">System Hardware version:</string>
+	-->
+
+	<string name="prima_ok">OK</string>
+
+	<string name="lighting_power_on">LIGHTS ON</string>
+	<string name="lighting_power_off">LIGHTS OFF</string>
+	<string name="lighting_reset">RESET</string>
+
+
+	<string name="lighting_top">TOP</string>
+	<string name="lighting_top_on">TOP ON</string>
+	<string name="lighting_top_off">TOP OFF</string>
+	<string name="lighting_screen">SPOT</string>
+	<string name="lighting_screen_on">SPOT ON</string>
+	<string name="lighting_screen_off">SPOT OFF</string>
+	<string name="lighting_wall">FLOOD</string>
+	<string name="lighting_wall_on">FLOOD ON</string>
+	<string name="lighting_wall_off">FLOOD OFF</string>
+	<string name="lighting_foot">Courtesy</string>
+	<string name="lighting_foot_on">COURTESY ON</string>
+	<string name="lighting_foot_off">COURTESY OFF</string>
+
+
+	<string name="lighting_mode_lighting">LIGHTING</string>
+	<string name="lighting_mode_movie">MOVIE</string>
+	<string name="lighting_mode_game">GAME</string>
+	<string name="lighting_mode_karaoke">KARAOKE</string>
+	<string name="lighting_mode_pause">PAUSE</string>
+	<string name="lighting_mode_welcome">WELCOME</string>
+
+	<string name="lighting_color_change1">Cool color gradient</string>
+	<string name="lighting_color_change2">WARM GRADIENT</string>
+	<string name="lighting_color_change3">FULL GRADIENT</string>
+	<!--<string name="lighting_color_change4">Gradient freeze</string> -->
+	<string name="lighting_color_change4">COLOR</string>
+	<string name="lighting_custom1">USER1</string>
+	<string name="lighting_custom2">USER2</string>
+	<string name="lighting_custom3">USER3</string>
+	<string name="lighting_save">SAVE</string>
+	<string name="lighting_save2">Save</string>
+
+	<string name="prompt_general">Prompt</string>
+	<string name="prompt_shutdown">Dear user, there is no any operation for a long time, for protecting your equipment,
+		the system will power off automatically!
+	</string>
+	<string name="strEditInputNameHint">SET DEVICE NAME</string>
+
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/global_overlay_color" >
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtAddNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dip"
+            android:textAppearance="@style/InActiveText"
+            android:textSize="40sp"
+            android:text="@string/disc_insert_note"
+            android:gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/btnPlayMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="513dp"
+        android:layout_marginTop="490dp"
+        android:padding="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_option_play" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtPlayMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/btnPlayMedia"
+        android:layout_toRightOf="@id/btnPlayMedia"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/watch_movie"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="36sp" />
+
+    <ImageButton
+        android:id="@+id/btnAddMediaToLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/btnPlayMedia"
+        android:layout_below="@id/btnPlayMedia"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_option_add" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtAddMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnAddMediaToLibrary"
+            android:layout_alignBottom="@id/btnAddMediaToLibrary"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/add_movie_library"
+            android:textAppearance="@style/smallActiveText"
+            android:textSize="36sp" />
+
+
+    <ImageButton
+        android:id="@+id/btnDoNothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/btnPlayMedia"
+        android:layout_below="@id/btnAddMediaToLibrary"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_option_select" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtDoNoting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btnDoNothing"
+        android:layout_alignBottom="@id/btnDoNothing"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="0dp"
+        android:textAppearance="@style/smallActiveText"
+        android:text="@string/do_nothing"
+        android:textSize="36sp" />
+
+
+
+    <ImageView
+        android:id="@+id/imgMediaTypeIcon"
+        android:layout_width="140dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dvd_loading_icn" />
+
+    <HorizontalScrollView
+        android:layout_width="1020dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+            >
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtTitleMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:scrollbarStyle="insideInset"
+            android:singleLine="true"
+            android:text="MOVIE TITLE TO SHOW"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="60sp" />
+    </HorizontalScrollView>
+
+    <FrameLayout
+         android:id="@+id/statusNotificationLayout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp">
+    </FrameLayout>
+
+</RelativeLayout>

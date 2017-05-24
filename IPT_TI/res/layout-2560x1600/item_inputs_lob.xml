@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_centerInParent="true"
+
+		>
+	<!--
+	android:background="@drawable/list_selector2"
+				android:layout_width="205dp"
+				android:layout_height="125dp" -->
+	<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+		<LinearLayout
+				android:id="@+id/ll_item_lobby"
+				android:layout_width="wrap_content"
+				android:layout_height="190dp"
+				android:padding="5dp"
+				android:gravity="center"
+				android:orientation="vertical"
+				>
+			<ImageView
+					android:id="@+id/img_input_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/dvd_loading_icn"
+					/>
+
+			<com.imax.ipt.ui.layout.IPTTextView
+					android:id="@+id/txt_input_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:text="Input Device Name"
+					android:textColor="@drawable/selector_txt_color"
+					android:textAppearance="@style/smallActiveText"
+					android:gravity="center"
+					android:textSize="20sp"
+					/>
+
+		</LinearLayout>
+
+
+		<LinearLayout
+				android:id="@+id/ll_edit_input_name"
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+		        android:visibility="gone"
+				>
+
+			<EditText
+					android:id="@+id/edit_input_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:hint="please set the device name"
+					android:textSize="20sp"
+					android:inputType="textAutoCorrect"
+			        android:layout_weight="1"
+					/>
+			<Button
+					android:id="@+id/btnOk"
+					android:layout_width="wrap_content"
+					android:layout_height="40dp"
+			        android:text="@string/ok"
+			        android:layout_weight="1"
+					/>
+
+		</LinearLayout>
+
+	</FrameLayout>
+
+</LinearLayout>

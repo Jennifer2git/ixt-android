@@ -1,0 +1,275 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageButton
+        android:id="@+id/mBtnFullScreen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="3dp"
+        android:layout_y="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ipt_gui_asset_multiview_go_fullscreen_btn_inactive" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:src="@drawable/ipt_gui_asset_multiview_configurator_4_up" />
+
+    <ImageButton
+        android:id="@+id/btnSelectInput3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="218dp"
+        android:layout_y="258dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_input_button" />
+
+    <ImageButton
+        android:id="@+id/btnSelectInput4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="748dp"
+        android:layout_y="256dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_input_button" />
+
+    <ImageButton
+        android:id="@+id/btnFocusAudio4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="993dp"
+        android:layout_y="257dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_audio_focus_button" />
+
+    <ImageButton
+        android:id="@+id/btnFocusAudio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="994dp"
+        android:layout_y="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_audio_focus_button" />
+
+    <ImageButton
+        android:id="@+id/mBtnFullScreen3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="257dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ipt_gui_asset_multiview_go_fullscreen_btn_inactive" />
+
+    <ImageButton
+        android:id="@+id/mBtnFullScreen2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="542dp"
+        android:layout_y="7dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ipt_gui_asset_multiview_go_fullscreen_btn_inactive" />
+
+    <ImageButton
+        android:id="@+id/btnFocusAudio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="468dp"
+        android:layout_y="257dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_audio_focus_button" />
+
+    <ImageButton
+        android:id="@+id/btnFocusAudio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="467dp"
+        android:layout_y="9dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_audio_focus_button" />
+
+    <ImageButton
+        android:id="@+id/btnSelectInput1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="224dp"
+        android:layout_y="9dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_input_button" />
+
+    <ImageButton
+        android:id="@+id/mBtnFullScreen4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="542dp"
+        android:layout_y="256dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ipt_gui_asset_multiview_go_fullscreen_btn_inactive" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="202dp"
+        android:layout_y="95dp" >
+
+        <ImageButton
+            android:id="@+id/btnSource1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ipt_gui_asset_movie_server_btn_inactive" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:layout_toRightOf="@+id/btnSource1"
+            android:orientation="vertical" >
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/now_playing"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtSource1"
+                android:layout_width="200dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnSelectInput2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="757dp"
+        android:layout_y="11dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_input_button" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="700dp"
+        android:layout_y="95dp" >
+
+        <ImageButton
+            android:id="@+id/btnSource2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:layout_toRightOf="@+id/btnSource2"
+            android:orientation="vertical" >
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/now_playing"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtSource2"
+                android:layout_width="200dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="188dp"
+        android:layout_y="340dp" >
+
+        <ImageButton
+            android:id="@+id/btnSource3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ipt_gui_asset_movie_server_btn_inactive" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:layout_toRightOf="@+id/btnSource3"
+            android:orientation="vertical" >
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/now_playing"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtSource3"
+                android:layout_width="200dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="714dp"
+        android:layout_y="341dp" >
+
+        <ImageButton
+            android:id="@+id/btnSource4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ipt_gui_asset_movie_server_btn_inactive" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:layout_toRightOf="@+id/btnSource4"
+            android:orientation="vertical" >
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/now_playing"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+
+            <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtSource4"
+                android:layout_width="200dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/smallActiveText"
+                android:textSize="8pt" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</AbsoluteLayout>

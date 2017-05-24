@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ipt_gui_asset_bg" >
+
+    <ImageView
+        android:id="@+id/btnLevLighting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="156dp"
+        android:layout_y="413dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_lev_indicator_button" />
+
+    <ImageButton
+        android:id="@+id/btnDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="156dp"
+        android:layout_y="496dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_ch_down_full_button" />
+
+    <ImageButton
+        android:id="@+id/btnUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="156dp"
+        android:layout_y="323dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_ch_up_full_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtLighting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="139dp"
+        android:layout_y="55dp"
+        android:text="@string/lighting"
+        android:textSize="30pt" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtPorcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="263dp"
+        android:layout_y="436dp"
+        android:textSize="18pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="587dp"
+        android:layout_y="145dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preferred_button" />
+
+    <ImageButton
+        android:id="@+id/imgBtn2"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="436dp"
+        android:layout_y="349dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="476dp"
+        android:layout_y="456dp"
+        android:gravity="center"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt7"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="532dp"
+        android:layout_y="604dp"
+        android:gravity="center"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtn8"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="619dp"
+        android:layout_y="495dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt8"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="658dp"
+        android:layout_y="604dp"
+        android:gravity="center"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtn9"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="727dp"
+        android:layout_y="494dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt9"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="749dp"
+        android:layout_y="604dp"
+        android:gravity="center"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtn10"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="839dp"
+        android:layout_y="494dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt10"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="863dp"
+        android:layout_y="604dp"
+        android:gravity="center"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt6"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="428dp"
+        android:layout_y="604dp"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtn6"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="397dp"
+        android:layout_y="497dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <ImageButton
+        android:id="@+id/imgBtn7"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="505dp"
+        android:layout_y="496dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="662dp"
+        android:layout_y="341dp"
+        android:gravity="center"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+
+    <ImageButton
+        android:id="@+id/imgBtn3"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="551dp"
+        android:layout_y="349dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="565dp"
+        android:layout_y="456dp"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtn4"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="677dp"
+        android:layout_y="349dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt4"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="707dp"
+        android:layout_y="456dp"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/imgBtn5"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_x="794dp"
+        android:layout_y="349dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txt5"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="821dp"
+        android:layout_y="456dp"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <FrameLayout
+        android:id="@+id/statusNotificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+    </FrameLayout>
+
+     <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+
+</AbsoluteLayout>

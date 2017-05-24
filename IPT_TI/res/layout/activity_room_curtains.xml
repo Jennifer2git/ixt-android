@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ipt_gui_asset_bg" >
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="139dp"
+        android:layout_y="55dp"
+        android:text="@string/curtains"
+        android:textSize="30pt" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="318dp"
+        android:layout_y="154dp"
+        android:src="@drawable/ipt_gui_asset_curtains_outside" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_x="322dp"
+        android:layout_y="544dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ipt_gui_asset_curtain_bottom_wave" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="wrap_content"
+        android:layout_height="314dp"
+        android:layout_x="862dp"
+        android:layout_y="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ipt_gui_asset_curtain_inner_vert_bar" />
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_x="863dp"
+        android:layout_y="541dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ipt_gui_asset_curtain_bottom_wave" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="317dp"
+        android:layout_x="377dp"
+        android:layout_y="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ipt_gui_asset_curtain_inner_vert_bar" />
+
+
+    <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/imgCurtain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="598dp"
+        android:layout_y="611dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_menu_rooms_curtains_button"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnCurtainOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="463dp"
+        android:layout_y="608dp"
+        android:background="@drawable/ipt_gui_asset_video_mode_2d_inactive"
+        android:text="@string/curtain_open"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnCurtainClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="726dp"
+        android:layout_y="608dp"
+        android:background="@drawable/ipt_gui_asset_video_mode_2d_inactive"
+        android:text="@string/curtain_close"
+        android:textColor="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/statusNotificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+    </FrameLayout>
+
+</AbsoluteLayout>

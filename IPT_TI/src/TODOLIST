@@ -1,0 +1,104 @@
+
+05-11 15:28:33.272: D/Event(11166): No subscripers registered for event class com.imax.iptevent.SubscriberExceptionEvent
+
+//NOTE : disable auto run app will be recycled by system, and can not receive the broadcast cmd from HP. so no response.
+
+leader pin -- 2018
+
+HP media room 00:13:95:1d:d5:62
+HP lib p room 00:13:95:1d:c5:91
+
+//TODO:need to optimize
+
+getsystempowerstates 2
+getinputsbydeviceskind 2
+
+power off the projector or system then play movie.
+#1.playing one movie
+#2.power off the system by IPT
+-->.HP player now stop to play.
+#3. start IHP by itself, then play again.
+#4. --> check: IHP can play as normal no stop, but player no audio no video.
+power off by user ui switch.
+
+1.on ui page disablie back btn. --done
+2.think of the operation flow whether disable all back btn of system or not? HP did this.excepte dialog.
+	-- done.
+8.lighting controling spec for HP - based on recent control version.
+6.set volume first start app, -26db. -- center control do this.
+7.pad lock - surelock ask thai
+
+3. lobby page need add check the active input device list is null. this caused by HP start IPT.
+	if null -> get the active device.
+4.local movie main page should distory when gone
+5.set a dataset or sharedpreference to restore active devices.
+
+6. add welcomeactivity lanchmode singleTask,
+7. debug UPSDialog show.
+
+
+
+//TODO DONE:
+
+//TODO design requirement:
+1.  IPT first connected to server then get system power state.
+2.  if not connect repeat connecting, -- pending on welcome page.
+    when connection ok, go to get system power state.
+3.  if power off -- power off page
+	if powering off -- system power counting up/down page
+	if powering on -- system power counting up/down page
+	if power on -- get active device.
+4.  first check power on then get active device. -- show lobby page.
+5.  how about bind connectservice to welcome page?
+	now IPTService start a thread to connect to server.
+6.  need to consider:
+    fire alarm
+    ups alarm
+    battery notifacation
+    error information: wifi disconnect / can't connect to pc
+  	lighting control/
+	curtain control
+	temperature control/
+
+
+
+//TODO MARK SOMETHING:
+1.config: [{"appName":"myapp","apkName":"myapp.apk","verName":1.0,"verCode":1,"forceUpdate":true,"description":"this version is fix this bug"}]
+2. asus http connect timeout 2s,readtimeout 1s, will timeout, // 2-2 error, 3-2 error,3-3 ok
+3. usa center control net http://10.0.101.10/ username:bIMAXm4u password:101
+http://10.0.101.10:8088/
+
+//TODO NOTE:
+HP PACKGE NAME = "com.imax.ihp.external"
+adb logcat |grep $(adb shell ps | grep $'com.imax.ipt' | awk '{print $2}')
+adb logcat |grep $'adb shell ps | grep $'com.imax.ipt' | awk '{print $2}''
+
+pid = adb shell ps | grep $'com.imax.ipt' | awk '{print $2}'
+adb logcat |grep $pid
+
+
+
+
+
+
+
+    public static final int LIGHTING_CONTROL_POWER_ON = 4;// power on
+    public static final int LIGHTING_CONTROL_POWER_OFF = 8;// power off
+    public static final int LIGHTING_CONTROL_LIGHTNESS_UP = 2;// LIGHTNESS UP
+    public static final int LIGHTING_CONTROL_LIGHTNESS_DOWN = 3;// LIGHTNESS DOWN
+
+    public static final int LIGHTING_CONTROL_COLOR_WHITE = 1;// COLOR WHITE
+    public static final int LIGHTING_CONTROL_COLOR_RED = 5;// COLOR RED
+    public static final int LIGHTING_CONTROL_COLOR_GREEN = 6;// COLOR GREEN
+    public static final int LIGHTING_CONTROL_COLOR_BLUE = 7;// COLOR BLUE
+    public static final int LIGHTING_CONTROL_COLOR_YELLOW = 13;// COLOR YELLOW
+    public static final int LIGHTING_CONTROL_FULL_COLOR = 16;// full color ->color gradient
+    public static final int LIGHTING_CONTROL_COLOR_SELECTION = 20;//color gradient fix
+
+    public static final int LIGHTING_MODE_MOVIE = 61;// Movie mode
+    public static final int LIGHTING_MODE_KARAOKE = 62;// Karaoke mode
+    public static final int LIGHTING_MODE_GAME = 63;// Game mode
+    public static final int LIGHTING_MODE_PAUSE = 64;// Pause mode
+    public static final int LIGHTING_MODE_WELCOME = 65;// Welcome mode
+    public static final int LIGHTING_MODE_LIGHTING = 66;// Lighting mode
+

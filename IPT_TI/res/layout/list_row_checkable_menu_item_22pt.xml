@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.imax.ipt.controls.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+    <com.imax.ipt.controls.IPTCheckableTextView
+        android:id="@+id/menuText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPTCheckableTextView"
+        android:textSize="22sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+         />
+
+</com.imax.ipt.controls.CheckableLinearLayout>

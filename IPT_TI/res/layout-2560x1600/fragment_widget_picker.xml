@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/gray_deep"
+    >
+
+    <!--
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal"
+                android:visibility="gone">
+        </LinearLayout>
+-->
+    <com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+        android:id="@+id/hlist_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+
+            >
+    </com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+
+</LinearLayout>

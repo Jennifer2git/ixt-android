@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ipt_gui_asset_bg" >
+
+    <TextView
+            android:id="@+id/txt_setting_system_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="@string/others"
+            android:textSize="20sp"/>
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="121dp"
+        android:layout_y="66dp"
+        android:text="@string/multiview"
+        android:textSize="18pt" />
+
+    <!--
+    <ImageButton
+        android:id="@+id/btnFocusAudio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1073dp"
+        android:layout_y="120dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_audio_focus_button" />
+
+    <ImageButton
+        android:id="@+id/btnSource1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="589dp"
+        android:layout_y="280dp"
+        android:background="@android:color/transparent" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="710dp"
+        android:layout_y="330dp"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtSource1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="714dp"
+        android:layout_y="350dp"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="83dp"
+        android:layout_y="114dp"
+        android:src="@drawable/ipt_gui_asset_multiview_configurator_full" />
+
+    <ImageButton
+        android:id="@+id/btnSelectInput1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="614dp"
+        android:layout_y="121dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_input_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="621dp"
+        android:layout_y="713dp"
+        android:text="@string/layouts"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/mBtnFullScreen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="92dp"
+        android:layout_y="121dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ipt_gui_asset_multiview_go_fullscreen_btn_inactive" />
+-->
+
+    <ImageButton
+        android:id="@+id/btnMultiViewLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="575dp"
+        android:layout_y="625dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_layout_button"
+        android:visibility="gone"
+         />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="605dp"
+        android:layout_y="733dp"
+        android:text="@string/layouts"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="8pt"
+        android:visibility="gone"
+         />
+
+    <FrameLayout
+        android:id="@+id/pipLayout"
+        android:layout_width="1070dp"
+        android:layout_height="545dp"
+        android:layout_x="100dp"
+        android:layout_y="120dp" >
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/statusNotificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <com.imax.ipt.ui.widget.verticalseekbar.VerticalSeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="391dp"
+        android:layout_x="5dp"
+        android:layout_y="123dp"
+        android:progressDrawable="@drawable/selector_vol_seek_bar"
+        android:thumb="@drawable/ipt_gui_asset_vol_knob_active_down"
+        android:visibility="gone"
+        />
+
+    <ImageButton
+        android:id="@+id/btnVolMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="5dp"
+        android:layout_y="547dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_vol_mute_button"
+        android:visibility="gone"
+        />
+
+</AbsoluteLayout>

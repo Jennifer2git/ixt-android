@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        >
+        <!--
+			<ImageButton
+					android:id="@+id/btnOptionsMenu"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_alignParentRight="true"
+					android:layout_marginBottom="1dip"
+					android:layout_marginRight="80dp"
+
+					android:background="@android:color/transparent"
+					android:src="@drawable/selector_remote_movie_menu_button" />
+
+			<com.imax.ipt.ui.layout.IPTTextView
+					android:id="@+id/txtOptionsMenu"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_alignParentRight="true"
+					android:layout_marginBottom="40dip"
+					android:layout_marginRight="40dp"
+					android:paddingLeft="5dp"
+					android:text="@string/options_menu"
+					android:textAppearance="@style/smallActiveText"
+					android:textSize="8pt" />
+
+		-->
+
+
+        <!--         <com.imax.ipt.ui.layout.IPTTextView
+				 android:id="@+id/txtOptionsMenu"
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:layout_alignParentBottom="true"
+				 android:layout_alignParentRight="true"
+				 android:layout_marginBottom="40dip"
+				 android:layout_marginRight="40dip"
+				 android:text="@string/option_menu"
+				 android:textAppearance="@style/smallActiveText"
+				 android:textSize="8pt" /> -->
+
+        -->
+
+
+        <Button
+                android:id="@+id/btnZoom"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="90dip"
+                android:layout_marginRight="40dip"
+                android:drawableLeft="@drawable/selector_btn_zoom"
+                android:background="@android:color/transparent"
+                android:text="@string/zoom"
+                android:textAppearance="@style/smallActiveText"
+                android:textColor="#ffffff"
+                android:textSize="8pt" />
+
+        <Button
+                android:id="@+id/btnOptionsMenu"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="1dip"
+                android:layout_marginRight="40dip"
+                android:drawableLeft="@drawable/selector_remote_movie_menu_button"
+                android:background="@android:color/transparent"
+                android:text="@string/options_menu"
+                android:textAppearance="@style/smallActiveText"
+                android:textColor="#ffffff"
+                android:textSize="8pt" />
+
+</RelativeLayout>

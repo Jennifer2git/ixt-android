@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="outerring_diameter">270dip</dimen>
+    <dimen name="image_logo_margin_left">150dp</dimen>
+    <dimen name="image_logo_margin_top">117dp</dimen>
+    <dimen name="txt_logo_margin_left">325dp</dimen>
+    <dimen name="txt_logo_margin_top">188dp</dimen>
+</resources>

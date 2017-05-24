@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlayout_lobby"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+    <!-- <fragment
+        android:id="@+id/fragment_nav_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+</fragment>
+-->
+    <ImageView
+            android:id="@+id/img_blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/global_overlay_color"
+
+            />
+
+    <ImageView
+            android:id="@+id/img_lobby_v_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="360dp"
+            android:src="@drawable/lobby_fullwidth_div"
+            />
+
+
+    <ImageView
+            android:id="@+id/img_lobby_h_div0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="417dp"
+            android:layout_marginTop="220dp"
+            android:src="@drawable/lobby_vertical_div"
+            />
+
+
+    <ImageView
+            android:id="@+id/img_lobby_h_div1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="220dp"
+            android:src="@drawable/lobby_vertical_div"
+            />
+
+    <ImageView
+            android:id="@+id/img_lobby_h_div2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="860dp"
+            android:layout_marginTop="220dp"
+            android:src="@drawable/lobby_vertical_div"
+            />
+
+    <ImageButton
+            android:id="@+id/btn_nav_main_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:padding="20dp"
+            android:src="@drawable/selector_nav_main_menu"
+            android:background="@android:color/transparent"
+
+            />
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_nav_main_menu"
+            android:layout_alignBottom="@id/btn_nav_main_menu"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="-5dp"
+            android:src="@drawable/nav_imax_logo"
+            />
+
+    <ImageButton
+            android:id="@+id/btn_nav_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/selector_btn_close"
+
+            />
+
+    <Button
+            android:id="@+id/btn_power_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp"
+            android:drawableTop="@drawable/selector_menu_power_button"
+            android:background="@android:color/transparent"
+            android:text="@string/power_off"
+            android:textSize="20sp"
+            android:textColor="@color/color_lobby"/>
+
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/vp_inputs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone">
+
+    </android.support.v4.view.ViewPager>
+
+<!--
+    <HorizontalScrollView
+            android:id="@+id/layout_gird_inputs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:scrollbars="none" >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+            <android.widget.GridView
+                    android:id="@+id/grid_inputs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:horizontalSpacing="5dp"
+                    android:verticalSpacing="125dp"
+                    android:columnWidth="205dp"
+                    android:gravity="center"
+                    android:numColumns="4"
+
+                    >
+
+            </android.widget.GridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+ -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="170dp"
+
+            >
+        <android.widget.GridView
+                android:id="@+id/grid_inputs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="131dp"
+                android:horizontalSpacing="2dp"
+                android:verticalSpacing="2dp"
+                android:columnWidth="220dp"
+                android:minHeight="210dp"
+                android:gravity="center"
+                android:numColumns="4"
+                android:stretchMode="none"
+                android:listSelector="@android:color/transparent"
+                android:background="@android:color/transparent"
+                >
+        </android.widget.GridView>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="565dp"
+            android:gravity="center"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle"
+            >
+
+        <ImageButton
+                android:id="@+id/btn_remote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_remote_previous_menu_button"
+                android:padding="20dp"
+                android:background="#00000000"
+                />
+
+        <ImageButton
+            android:id="@+id/btn_lights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="#00000000"
+            android:src="@drawable/selector_lighting_power"
+            />
+
+        <Button
+                android:id="@+id/btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_menu_settings_button"
+                android:visibility="gone"
+                />
+
+        <ImageButton
+                android:id="@+id/btn_maintence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="#00000000"
+                android:src="@drawable/selector_menu_settings_maintence_button"
+                />
+
+        <ImageButton
+                android:id="@+id/btn_prefer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:padding="20dp"
+                android:src="@drawable/selector_menu_settings_pref_button"
+                />
+
+        <ImageButton
+                android:id="@+id/btn_others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:padding="20dp"
+                android:src="@drawable/selector_menu_settings_others_button"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_lighting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="650dp"
+            android:divider="@drawable/diver_line_small"
+            android:showDividers="middle"
+            >
+
+    <Button
+            android:id="@+id/btn_lights_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_lighting_poweron"
+            android:text="@string/lighting_power_on"
+            android:textColor="@color/gray_light"
+
+            />
+
+    <Button
+            android:id="@+id/btn_lights_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/lighting_power_off"
+            android:textColor="@color/gray_light"
+            android:background="@drawable/selector_lighting_poweroff"
+            />
+    </LinearLayout>
+    <FrameLayout
+            android:id="@+id/fragment_volume_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/layout_lighting"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginTop="20dp">
+    </FrameLayout>
+
+</RelativeLayout>

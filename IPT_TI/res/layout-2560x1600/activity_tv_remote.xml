@@ -1,0 +1,266 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ipt_gui_asset_bg" >
+
+    <ImageButton
+        android:id="@+id/btnVolMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dip"
+        android:layout_x="6dp"
+        android:layout_y="634dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_vol_mute_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="106dp"
+        android:layout_y="40dp"
+        android:text="@string/now_playing"
+        android:textSize="30pt" />
+
+    <ImageButton
+        android:id="@+id/btnTvFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="359dp"
+        android:layout_y="159dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_fav_simple_button" />
+
+    <ImageButton
+        android:id="@+id/btnTvChUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="359dp"
+        android:layout_y="282dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_ch_up_simple_button" />
+
+    <ImageButton
+        android:id="@+id/btnTvChDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="359dp"
+        android:layout_y="471dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_ch_down_simple_button" />
+
+    <GridLayout android:id="@+id/gridLayout"
+        android:layout_width="471dp"
+        android:layout_height="match_parent"
+        android:layout_x="601dp"
+        android:layout_y="134dp"
+        android:columnCount="3" >
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="1"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="2"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="3"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="4"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="5"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="6"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="7"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="8"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="9"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="left"
+            android:layout_row="3"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="24pt" />
+
+        <Button
+            android:id="@+id/btnEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="3"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="@string/enter"
+            android:textColor="#ffffff"
+            android:textSize="12pt" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="3"
+            android:background="@drawable/selector_tv_num_simple_button"
+            android:text="@string/clear"
+            android:textColor="#ffffff"
+            android:textSize="12pt" />
+    </GridLayout>
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1dp"
+        android:layout_y="2dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_back_button" />
+
+    <Switch
+        android:id="@+id/btnSimpleFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1100dp"
+        android:layout_y="700dp"
+        android:textOff="@string/control_type_simple"
+        android:textOn="@string/control_type_full" />
+
+<!--     <ToggleButton
+        android:id="@+id/btnSimpleFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="35dp"
+        android:layout_x="1179dp"
+        android:layout_y="693dp"
+        android:background="@drawable/toogle_button"
+        android:textAppearance="@style/smallActiveText"
+        android:textOff="Simple"
+        android:textOn="Full" /> -->
+
+    <FrameLayout
+        android:id="@+id/statusNotificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dip"
+        android:layout_marginTop="80dip"
+        android:layout_x="380dp"
+        android:layout_y="399dp"
+        android:text="@string/ch"
+        android:textAppearance="@style/InActiveText"
+        android:textSize="30pt" />
+
+    <Button
+        android:id="@+id/btnPrevCh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="352dp"
+        android:layout_y="582dp"
+        android:background="@drawable/selector_tv_ch_prev_simple_button"
+        android:text="@string/prev_ch"
+        android:textAppearance="@style/smallActiveText"
+        android:textColor="#ffffff"
+        android:textSize="12pt" />
+
+    <com.imax.ipt.ui.widget.verticalseekbar.VerticalSeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="363dp"
+        android:layout_x="6dp"
+        android:layout_y="208dp"
+        android:progressDrawable="@drawable/selector_vol_seek_bar"
+        android:thumb="@drawable/ipt_gui_asset_vol_knob_active_down" />
+
+</AbsoluteLayout>

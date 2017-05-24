@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/ipt_gui_asset_bg">
+
+    <ListView
+        android:id="@+id/listViewEvents"
+        android:layout_width="683dp"
+        android:layout_height="640dp"
+        android:layout_x="528dp"
+        android:layout_y="61dp" >
+    </ListView>
+
+</AbsoluteLayout>

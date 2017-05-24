@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+        android:gravity="center_horizontal">
+
+    <ImageButton
+        android:id="@+id/imbCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_source_button" />
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/lbltitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imbCover"
+        android:text="Channel" />
+
+
+</RelativeLayout>

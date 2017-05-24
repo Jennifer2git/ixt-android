@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:divider="@drawable/diver_line"
+              android:showDividers="middle"
+              android:background="@android:color/transparent"
+     >
+
+     <com.imax.ipt.ui.widget.verticalseekbar.VerticalSeekBar
+        android:id="@+id/seekBarVolume1"
+        android:layout_width="95dp"
+        android:layout_height="390dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="-9.5dp"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:thumb="@drawable/ipt_gui_asset_vol_knob_active_down"
+        android:clickable="false"
+        android:visibility="gone"
+        />
+
+
+    <ImageButton
+            android:id="@+id/btnVolMute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_vol_mute_button" />
+
+
+       <ImageButton
+           android:id="@+id/volumeDown"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+            android:layout_marginRight="-10dp"
+           android:background="@android:color/transparent"
+           android:src="@drawable/selector_vol_down_button"
+           />
+
+    <LinearLayout
+            android:id="@+id/ll_seekbar"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+        <SeekBar
+                android:id="@+id/seekBarVolume"
+                android:indeterminate="false"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:minHeight="5dp"
+                android:maxHeight="5dp"
+                android:focusable="true"
+                android:padding="10dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:thumbOffset="0dp"
+                android:thumb="@drawable/system_general_bar_slider"
+                android:progressDrawable="@drawable/seekbar_horizontal"
+                />
+
+    </LinearLayout>
+
+    <ImageButton
+            android:id="@+id/volumeUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_vol_up_button"
+            />
+
+</LinearLayout>

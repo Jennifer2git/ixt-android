@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ipt_gui_asset_bg" >
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtClimate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="139dp"
+        android:layout_y="55dp"
+        android:text="@string/climate"
+        android:textSize="30pt" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="410dp"
+        android:layout_y="132dp"
+        android:src="@drawable/ipt_gui_asset_climate_controls_container" />
+
+    <ImageButton
+        android:id="@+id/btnUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="569dp"
+        android:layout_y="166dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_ch_up_simple_button" />
+
+    <ImageButton
+        android:id="@+id/btnDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="569dp"
+        android:layout_y="419dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_ch_down_simple_button" />
+
+    <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtActualTemerature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="569dp"
+        android:layout_y="561dp"
+        android:text="@string/celsius"
+        android:textSize="24pt" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtSetPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="544dp"
+        android:layout_y="288dp"
+        android:text="@string/celsius"
+        android:textSize="48pt" />
+
+    <ImageView
+        android:id="@+id/imgFan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="656dp"
+        android:layout_y="601dp"
+        android:src="@drawable/ipt_gui_asset_climate_fan_indicator"
+        android:visibility="invisible" />
+
+    <ToggleButton
+        android:id="@+id/btnFanOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="35dp"
+        android:layout_x="579dp"
+        android:layout_y="638dp"
+        android:background="@drawable/toogle_button"
+        android:textOff="@string/climate_fan_auto"
+        android:textOn="@string/climate_fan_on"
+        android:visibility="gone" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/btnFanState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="580dp"
+        android:layout_y="610dp"
+        android:drawableTop="@drawable/ipt_gui_asset_climate_fan_indicator"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtFaultDescription"
+        android:layout_width="348dp"
+        android:layout_height="110dp"
+        android:layout_x="138dp"
+        android:layout_y="574dp"
+        android:gravity="center"
+        android:text="Fault Message"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:id="@+id/statusNotificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp" >
+    </FrameLayout>
+
+</AbsoluteLayout>

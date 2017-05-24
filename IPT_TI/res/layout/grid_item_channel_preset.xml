@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageButton
+        android:id="@+id/imbPreset"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_tv_source_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/lblChannelNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="58dp"
+        android:gravity="center_horizontal"
+        android:text="Channel" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/lblChannelDisplayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="91dp"
+        android:gravity="center_horizontal"
+        android:text="Name" />
+
+</AbsoluteLayout>

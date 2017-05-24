@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/viewpager_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_light_catalogue"
+                >
+        <com.imax.ipt.ui.widget.gridview.TwoWayGridWidget
+                android:id="@+id/gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="510dip"
+                android:layout_marginBottom="100dip"
+                android:layout_marginTop="100dip"
+                android:background="@color/gray_light_catalogue"
+                android:fastScrollEnabled="false"
+                android:focusable="true"
+                android:listSelector="@color/electric_blue"
+                app:cacheColorHint="@android:color/transparent"
+                app:columnWidth="115dip"
+                app:gravity="center"
+                app:numColumns="7"
+                app:numRows="auto_fit"
+                app:rowHeight="170dip"
+                app:scrollDirectionLandscape="horizontal"
+                app:stretchMode="spacingWidthUniform"
+                >
+        </com.imax.ipt.ui.widget.gridview.TwoWayGridWidget>
+
+        <!--
+<GridView
+        android:id="@+id/grid_movie_content"
+        android:layout_width="fill_parent"
+        android:layout_height="510dip"
+        android:layout_marginBottom="100dip"
+        android:layout_marginTop="100dip"
+        android:background="@color/gray_light_catalogue"
+        android:fastScrollEnabled="false"
+        android:focusable="true"
+        android:listSelector="@color/electric_blue"
+        android:numColumns="7"
+        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="115dip"
+        android:gravity="center"
+        android:numRows="auto_fit"
+        android:rowHeight="170dip"
+        android:scrollDirectionLandscape="horizontal"
+        android:stretchMode="spacingWidthUniform"
+        >
+
+</GridView>
+
+-->
+
+
+</RelativeLayout>

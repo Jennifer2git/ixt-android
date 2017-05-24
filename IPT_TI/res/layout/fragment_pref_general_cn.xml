@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtTouchPanel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        style="@style/smallInActiveText"
+        android:text="@string/touch_panel_1"
+        android:textSize="@dimen/txtSettingNormal" />
+
+    <com.imax.ipt.ui.widget.seekbar.TextMoveLayout
+            android:id="@+id/textLayout"
+            android:layout_alignLeft="@id/txtTouchPanel1"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="200dp"
+            android:textSize="18dp"
+            android:visibility="gone"/>
+    <!--     <SeekBar
+            android:id="@+id/seekbar_pad_sleep_time"
+            style="@style/mprogress_horizon"
+            android:max="100"
+            android:indeterminate="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@id/txtTouchPanel1"
+            android:layout_marginTop="220dp"
+            android:progressDrawable="@drawable/seekbar_horizontal"
+            android:thumb="@drawable/system_general_bar_slider"/>
+
+-->
+    <LinearLayout
+            android:id="@+id/ll_seekbar"
+            android:orientation="vertical"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="220dp"
+            android:visibility="gone"
+            >
+
+        <SeekBar
+                android:id="@+id/seekbar_pad_sleep_time"
+                android:max="100"
+                android:indeterminate="false"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:thumbOffset="0dp"
+                android:thumb="@drawable/system_general_bar_slider"
+                android:progressDrawable="@drawable/seekbar_horizontal"
+                />
+
+    </LinearLayout>
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtNumber"
+            style="@style/smallInActiveText"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtTouchPanel1"
+            android:layout_alignBottom="@id/txtTouchPanel1"
+            android:layout_marginLeft="30dp"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+    <ImageButton
+            android:id="@+id/btnPrefUp"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/txtNumber"
+            android:layout_above="@id/txtNumber"
+            android:paddingTop="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_pref_arrow_up_small_button" />
+
+
+    <ImageButton
+            android:id="@+id/btnPrefDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/btnPrefUp"
+            android:layout_below="@id/txtNumber"
+            android:paddingBottom="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_pref_arrow_down_small_button" />
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtTouchPanelSleep"
+            style="@style/smallInActiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtNumber"
+            android:layout_alignBottom="@id/txtTouchPanel1"
+            android:layout_marginLeft="10dp"
+            android:text="@string/minutes"
+            android:textSize="@dimen/txtSettingNormal" />
+
+
+<!-- +/-
+    <ImageButton
+        android:id="@+id/btnPrefUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="235dp"
+        android:layout_alignLeft="@id/txtTouchPanel1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_pref_arrow_up_small_button" />
+
+
+    <ImageButton
+        android:id="@+id/btnPrefDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/txtTouchPanel1"
+        android:layout_alignBottom="@id/btnPrefUp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_pref_arrow_down_small_button" />
+-->
+
+<!--
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/IPTTextView01"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="571dp"
+        android:layout_y="231dp"
+        android:text="@string/imax_preshow"
+        android:textSize="8pt"
+        android:visibility="gone" />
+-->
+    <ToggleButton
+        android:id="@+id/btnSimpleFull01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="35dp"
+        android:layout_x="893dp"
+        android:layout_y="228dp"
+        android:background="@drawable/toogle_button"
+        android:textAppearance="@style/smallActiveText"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+    
+  	<com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/btnSimple"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="910dp"
+        	android:layout_y="231dp"
+	        android:text="@string/off"
+	        android:textAppearance="@style/smallInActiveText"
+	        android:textSize="8pt"
+	        android:visibility="gone"
+         />
+    <!--
+
+	<com.imax.ipt.ui.util.MySwitch
+		android:id="@+id/btnSimpleFull1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="28dp"
+		android:layout_marginRight="60dp"
+		android:layout_x="825dp"
+		android:layout_y="220dp"
+		android:visibility="gone"
+		/>
+-->
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/btnFull"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="1045dp"
+	        android:layout_y="231dp"
+	        android:layout_marginBottom="30dip"
+	        android:layout_marginRight="25dip"
+	        android:text="@string/on"
+	        android:textAppearance="@style/smallActiveText"
+	        android:textSize="16sp"
+	        android:visibility="gone"
+	         />
+<!-- begin add for lighting set 20151019 jennifer-->
+
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtDelayTime1"
+            style="@style/smallInActiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txtTouchPanel1"
+            android:layout_below="@id/txtTouchPanel1"
+            android:layout_marginTop="70dp"
+            android:text="@string/lighting_delay_time_1"
+            android:textSize="@dimen/txtSettingNormal" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtDelayTimeNumber"
+            style="@style/smallInActiveText"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/txtDelayTime1"
+            android:layout_alignRight="@id/txtNumber"
+            android:layout_marginLeft="30dip"
+            android:text="5"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+
+    <ImageButton
+            android:id="@+id/btnDelayTimeUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txtDelayTimeNumber"
+            android:layout_above="@id/txtDelayTimeNumber"
+            android:paddingTop="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_pref_arrow_up_small_button" />
+
+
+    <ImageButton
+            android:id="@+id/btnDelayTimeDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/btnDelayTimeUp"
+            android:layout_below="@id/txtDelayTimeNumber"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_pref_arrow_down_small_button" />
+
+    <!--
+    <ImageButton
+            android:id="@+id/btnDelayTimeUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txtTouchPanel1"
+            android:layout_below="@id/txtDelayTime1"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_pref_arrow_up_small_button" />
+
+
+    <ImageButton
+            android:id="@+id/btnDelayTimeDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/btnPrefDown"
+            android:layout_alignBottom="@id/btnDelayTimeUp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_pref_arrow_down_small_button" /> -->
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtDelayTime2"
+            style="@style/smallInActiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtDelayTimeNumber"
+            android:layout_alignBottom="@id/txtDelayTime1"
+            android:layout_marginLeft="10dp"
+            android:text="@string/lighting_delay_time_2"
+            android:textSize="@dimen/txtSettingNormal"
+            />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtSetLighting"
+            style="@style/smallInActiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txtTouchPanel1"
+            android:layout_below="@id/txtDelayTime1"
+            android:layout_marginTop="70dp"
+            android:text="@string/light_setting"
+            android:textSize="@dimen/txtSettingNormal"
+            android:visibility="invisible"/>
+
+    <ImageButton
+            android:id="@+id/btnSetLighting"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txtNumber"
+            android:layout_alignBottom="@id/txtSetLighting"
+            android:padding="10dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginLeft="-5dp"
+            android:background="#00000000"
+            android:src="@drawable/lobby_settings_icn"
+            android:visibility="invisible"
+            />
+
+    <!-- end add for lighting set 20151019 jennifer-->
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/IPTTextView02"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="571dp"
+        android:layout_y="231dp"
+        android:text="@string/default_control"
+        android:textSize="8pt"
+        android:visibility="gone" />
+
+    <ToggleButton
+        android:id="@+id/ToggleButton02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="35dp"
+        android:layout_x="894dp"
+        android:layout_y="325dp"
+        android:background="@drawable/toogle_button"
+        android:textAppearance="@style/smallActiveText"
+        android:textColor="#ffffff"
+        android:textOff="Remote"
+        android:textOn="Simple"
+        android:visibility="gone" />
+
+
+      	<com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/btnSimple1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="910dp"
+        	android:layout_y="231dp"
+	        android:text="@string/control_type_simple"
+	        android:textAppearance="@style/smallInActiveText"
+	        android:textSize="8pt"
+            android:visibility="gone"
+         />
+    <!--
+        <com.imax.ipt.ui.util.MySwitch
+            android:id="@+id/btnSimpleFull2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginBottom="28dp"
+        	android:layout_marginRight="60dp"
+        	android:layout_x="755dp"
+        	android:layout_y="220dp"
+
+            />
+-->
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/btnFull1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="1075dp"
+	        android:layout_y="231dp"
+	        android:layout_marginBottom="30dip"
+	        android:layout_marginRight="25dip"
+	        android:text="@string/control_type_full"
+	        android:textAppearance="@style/smallActiveText"
+	        android:textSize="8pt"
+            android:visibility="gone"
+	         />
+
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/IPTTextView03"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="571dp"
+        android:layout_y="324dp"
+        android:text="@string/scan_new_cover"
+        android:textSize="8pt"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="61dp"
+        android:layout_height="64dp"
+        android:layout_x="979dp"
+        android:layout_y="307dp"
+        android:background="@drawable/ipt_gui_asset_alpha_slider_circle"
+        android:text="@string/go"
+        android:textColor="#ffffff"
+        android:textSize="8pt"
+        android:visibility="gone" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/IPTTextView04"
+        style="@style/smallInActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="571dp"
+        android:layout_y="222dp"
+        android:text="@string/check_software_update"
+        android:textSize="8pt"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btnCheckSoftwareUpdate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_x="789dp"
+        android:layout_y="180dp"
+        android:background="@drawable/ipt_gui_asset_alpha_slider_circle"
+        android:text="@string/go"
+        android:textColor="#ffffff"
+        android:textSize="8pt"
+        android:visibility="gone"
+         />
+
+</RelativeLayout>

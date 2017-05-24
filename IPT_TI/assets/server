@@ -1,0 +1,675 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using IMAX.IPT.TmsJsonNs.Results;
+using Jayrock.Services;
+using Jayrock.JsonRpc;
+using IMAX.IPT.PersistenceSharedNs.InputSources;
+using IMAX.IPT.TmsNs;
+using IMAX.IPT.MediaPlayerNs;
+
+namespace IMAX.IPT.TmsJsonNs
+{
+    public interface ITmsJsonIptService : IService
+    {
+	    DONE
+        [JsonRpcMethod("getActiveDeviceTypes", Idempotent = true)]
+        [JsonRpcHelp("Returns the device types available for input selections.")]
+        ResultGetActiveDeviceTypes GetActiveDeviceTypes();
+
+        [JsonRpcMethod("getInput", Idempotent = true)]
+        [JsonRpcHelp("Returns the input selection by input ID.")]
+        ResultInput GetInput(int inputId);
+
+        [JsonRpcMethod("getInputsByDeviceKind", Idempotent = true)]
+        [JsonRpcHelp("Returns the input selection available for a device kind.")]
+        ResultGetInputsByDeviceKind GetInputsByDeviceKind(DeviceKind deviceKind);
+
+DONE
+        [JsonRpcMethod("setNowPlayingInput", Idempotent = true)]
+        [JsonRpcHelp("Change picture and audio focus of the selected input.  Pip mode will be changed to FULL SCREEN mode automatically")]
+        ResultGeneric SetNowPlayingInput(int inputId);
+DONE
+        [JsonRpcMethod("getNowPlayingInput", Idempotent = true)]
+        [JsonRpcHelp("Returns the input currently has the audio focus.")]
+        ResultInput GetNowPlayingInput();
+DONE
+        [JsonRpcMethod("setSelectedInput", Idempotent = true)]
+        [JsonRpcHelp("Change the picture input of the selected output index")]
+        ResultGeneric SetSelectedInput(int outputIndex, int inputId);
+DONE
+        [JsonRpcMethod("getSelectedInput", Idempotent = true)]
+        [JsonRpcHelp("Get the input of the selected output index")]
+        ResultInput GetSelectedInput(int outputIndex);
+DONE
+        [JsonRpcMethod("setAudioFocus", Idempotent = true)]
+        [JsonRpcHelp("Set the audio focus to the selected input ID")]
+        ResultGeneric SetAudioFocus(int inputId);
+DONE
+        [JsonRpcMethod("getAudioFocus", Idempotent = true)]
+        [JsonRpcHelp("Retrieve the input ID that currently has the audio focus")]
+        ResultInteger GetAudioFocus();
+DONE
+        [JsonRpcMethod("setPipMode", Idempotent = true)]
+        [JsonRpcHelp("Change the PIP mode of the theatre display")]
+        ResultGeneric SetPipMode(byte pipMode);
+DONE
+        [JsonRpcMethod("getPipMode", Idempotent = true)]
+        [JsonRpcHelp("Get the current PIP mode of the theatre display")]
+        ResultPipMode GetPipMode(bool withSelectedInputs);
+
+
+        // Media Player - Media Playback Controls
+        [JsonRpcMethod("getMovieIds", Idempotent = true)]
+        [JsonRpcHelp("Get array of movieIds according to the filter")]
+        ResultGuidArray GetMovieIds(int genreId, int actorId, int directorId, int[] years,
+            int bluray, int favorite, int imax, int threeD, string searchString);
+DONE
+        [JsonRpcMethod("getMovieLite", Idempotent = true)]
+        [JsonRpcHelp("Get limited info of a movie for movie browsing")]
+        ResultMovieLite GetMovieLite(Guid id);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="startIndex"></param>
+        /// <param name="count"></param>
+        /// <param name="genreId"></param>
+        /// <param name="actorId"></param>
+        /// <param name="directorId"></param>
+        /// <param name="years"></param>
+        /// <param name="bluray"></param>
+        /// <param name="favorite"></param>
+        /// <param name="imax"></param>
+        /// <param name="threeD"></param>
+        /// <param name="searchString"></param>
+        /// <param name="orderByOptions"> 
+        /// 0 = Order by Title, 
+        /// 1 = Order by Year, Title (for movie order by YEAR in ascending order) 
+        /// </param>
+        /// <returns></returns>
+        [JsonRpcMethod("getMovieLites", Idempotent = true)]
+   DONE     [JsonRpcHelp("Get limited info of movies for movie browsing")]
+        ResultMovieLites GetMovieLites(int startIndex, int count,
+            int genreId, int actorId, int directorId, int[] years, int bluray, int favorite, int imax,
+            int threeD, string searchString, int orderByOptions);
+DONE
+        [JsonRpcMethod("getMovie", Idempotent = true)]
+        [JsonRpcHelp("Get full info of a movie for movie")]
+        ResultMovie GetMovie(Guid id);
+DONE
+        [JsonRpcMethod("getMovieAlphaListings", Idempotent = true)]
+        [JsonRpcHelp("Get available alphabet listing for the filtered movie selection")]
+        ResultAlphaListing GetMovieAlphaListings(int genreId, int actorId, int directorId,
+            int[] years, int bluray, int favorite, int imax, int threeD, string searchString);
+       
+   DONE     [JsonRpcMethod("getMovieAlphaIndex", Idempotent = true)]
+        [JsonRpcHelp("Get the starting index of the first alpha letter within the filtered selections")]
+        ResultInteger GetMovieAlphaIndex(string alpha, int genreId, int actorId, int directorId,
+            int[] years, int bluray, int favorite, int imax, int threeD, string searchString);
+DONE
+        [JsonRpcMethod("getMovieYearIndex", Idempotent = true)]
+        [JsonRpcHelp("Get the starting index of the year within the filtered selections")]
+        ResultInteger GetMovieYearIndex(int year, int genreId, int actorId, int directorId,
+            int[] years, int bluray, int favorite, int imax, int threeD, string searchString);
+DONE
+        [JsonRpcMethod("playMovie", Idempotent = true)]
+        [JsonRpcHelp("Play the selected movie")]
+        ResultGeneric PlayMovie(Guid movieId);
+
+        //// Deprecated
+        //[JsonRpcMethod("getPlayingMovieId", Idempotent = true)]
+        //[JsonRpcHelp("get the movie ID currently loadad")]        
+        //ResultGuid GetPlayingMovieId();
+DONE
+        [JsonRpcMethod("getPlayingMovie", Idempotent = true)]
+        [JsonRpcHelp("Get full info of a movie for movie")]
+        ResultMovieLite GetPlayingMovie();
+
+        [JsonRpcMethod("updateMovie", Idempotent = true)]
+        [JsonRpcHelp("update movie details")]
+        ResultGeneric UpdateMovieData(TmsMovie movie);
+
+        [JsonRpcMethod("deleteMovie", Idempotent = true)]
+        [JsonRpcHelp("Delete a movie from the library")]
+        ResultGeneric DeleteMovie(Guid id);
+
+        [JsonRpcMethod("getMovieGenreIds", Idempotent = true)]
+        [JsonRpcHelp("Get movie genre IDs available for the filtered criteria")]
+        ResultIntegerArray GetMovieGenreIds(Guid movieId, string searchString);
+
+        [JsonRpcMethod("getMovieGenre", Idempotent = true)]
+        [JsonRpcHelp("Get details of a specific movie genre")]
+        ResultGenre GetMovieGenre(int id);
+
+        [JsonRpcMethod("getMovieGenres", Idempotent = true)]
+        [JsonRpcHelp("Get movie genress for the index range")]
+        ResultGenres GetMovieGenres(int startIndex, int count,
+            Guid movieId, string searchString);
+
+        [JsonRpcMethod("getMovieActorIds", Idempotent = true)]
+        [JsonRpcHelp("Get movie actor IDs available for the filtered criteria")]
+        ResultIntegerArray GetMovieActorIds(Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieActor", Idempotent = true)]
+        [JsonRpcHelp("Get details of a specific movie actor")]
+        ResultPerson GetMovieActor(int id);
+
+        [JsonRpcMethod("getMovieActors", Idempotent = true)]
+        [JsonRpcHelp("Get details of actors by indexes")]
+        ResultPersons GetMovieActors(int startIndex, int count,
+            Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieActorAlphaListings", Idempotent = true)]
+        [JsonRpcHelp("Get available alphabet listing for the filtered actor selection")]
+        ResultAlphaListing GetMovieActorAlphaListings(Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieActorAlphaIndex", Idempotent = true)]
+        [JsonRpcHelp("Get the starting index of the first alpha letter within the filtered selections")]
+        ResultInteger GetMovieActorAlphaIndex(string alpha, Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieDirectorIds", Idempotent = true)]
+        [JsonRpcHelp("Get movie director IDs available for the filtered criteria")]
+        ResultIntegerArray GetMovieDirectorIds(Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieDirector", Idempotent = true)]
+        [JsonRpcHelp("Get details of a specific movie director")]
+        ResultPerson GetMovieDirector(int id);
+
+        [JsonRpcMethod("getMovieDirectors", Idempotent = true)]
+        [JsonRpcHelp("Get details of movie directors")]
+        ResultPersons GetMovieDirectors(int startIndex, int count,
+            Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieDirectorAlphaListings", Idempotent = true)]
+        [JsonRpcHelp("Get available alphabet listing for the filtered director selection")]
+        ResultAlphaListing GetMovieDirectorAlphaListings(Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieDirectorAlphaIndex", Idempotent = true)]
+        [JsonRpcHelp("Get the starting index of the first alpha letter within the filtered selections")]
+        ResultInteger GetMovieDirectorAlphaIndex(string alpha, Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMovieYearDecades", Idempotent = true)]
+        [JsonRpcHelp("Get movie year decades available for the filtered criteria")]
+        ResultIntegerArray GetMovieYearDecades();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="musicArtistId"></param>
+        /// <param name="musicGenreId"></param>
+        /// <param name="searchString"></param>
+        /// <param name="favorite">
+        ///     0 = don't care
+        ///     1 = favoriate flagged
+        ///     2 = favoriate not flagged
+        /// </param>
+        /// <returns></returns>
+        [JsonRpcMethod("getMusicAlbumIds", Idempotent = true)]
+        [JsonRpcHelp("Get music album IDs available for the filtered criteria")]
+        ResultGuidArray GetMusicAlbumIds(int musicArtistId, int musicGenreId, string searchString, int favorite);
+
+        [JsonRpcMethod("getMusicAlbum", Idempotent = true)]
+        [JsonRpcHelp("Get music album with the specified ID")]
+        ResultMusicAlbum GetMusicAlbum(Guid id, bool withTracks);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="startIndex"></param>
+        /// <param name="count"></param>
+        /// <param name="musicArtistId"></param>
+        /// <param name="musicGenreId"></param>
+        /// <param name="searchString"></param>
+        /// <param name="favorite">
+        ///     0 = don't care
+        ///     1 = favoriate flagged
+        ///     2 = favoriate not flagged
+        /// </param>
+        /// <returns></returns>
+        [JsonRpcMethod("getMusicAlbums", Idempotent = true)]
+        [JsonRpcHelp("Get music albums by index")]
+        ResultMusicAlbums GetMusicAlbums(int startIndex, int count, 
+            int musicArtistId, int musicGenreId, string searchString, int favorite);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="musicArtistId"></param>
+        /// <param name="musicGenreId"></param>
+        /// <param name="searchString"></param>
+        /// <param name="favorite">
+        ///     0 = don't care
+        ///     1 = favoriate flagged
+        ///     2 = favoriate not flagged
+        /// </param>
+        /// <returns></returns>
+        [JsonRpcMethod("getMusicAlbumAlphaListings", Idempotent = true)]
+        [JsonRpcHelp("Get available alphabet listing for the filtered music album selection")]
+        ResultAlphaListing GetMusicAlbumAlphaListings(int musicArtistId, int musicGenreId, string searchString, int favorite);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="alpha"></param>
+        /// <param name="musicArtistId"></param>
+        /// <param name="musicGenreId"></param>
+        /// <param name="searchString"></param>
+        /// <param name="favorite">
+        ///     0 = don't care
+        ///     1 = favoriate flagged
+        ///     2 = favoriate not flagged
+        /// </param>
+        /// <returns></returns>
+        [JsonRpcMethod("getMusicAlbumAlphaIndex", Idempotent = true)]
+        [JsonRpcHelp("Get the starting index of the alpha character as the first letter of the album title for the filtered music album selection")]
+        ResultInteger GetMusicAlbumAlphaIndex(string alpha, int musicArtistId, int musicGenreId, string searchString, int favorite);
+
+        [JsonRpcMethod("getMusicTrackIds", Idempotent = true)]
+        [JsonRpcHelp("Get music track IDs available for the filtered criteria")]
+        ResultGuidArray GetMusicTrackIds(Guid albumId, int artistId, int genreId, string searchString);
+
+        [JsonRpcMethod("getMusicTrack", Idempotent = true)]
+        [JsonRpcHelp("Get music track with the specified ID")]
+        ResultMusicTrack GetMusicTrack(Guid trackId);
+
+        [JsonRpcMethod("getMusicGenreIds", Idempotent = true)]
+        [JsonRpcHelp("Get music genre IDs available for the filtered criteria")]
+        ResultIntegerArray GetMusicGenreIds(string searchString);
+
+        [JsonRpcMethod("getMusicGenre", Idempotent = true)]
+        [JsonRpcHelp("Get music genre with the specified ID")]
+        ResultGenre GetMusicGenre(int genreId);
+
+        [JsonRpcMethod("getMusicGenres", Idempotent = true)]
+        [JsonRpcHelp("Get music genres with specific index")]
+        ResultGenres GetMusicGenres(int startIndex, int count, string searchString);
+
+        [JsonRpcMethod("getMusicArtistIds", Idempotent = true)]
+        [JsonRpcHelp("Get music artist IDs available for the filtered criteria")]
+        ResultIntegerArray GetMusicArtistIds(string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMusicArtist", Idempotent = true)]
+        [JsonRpcHelp("Get music artist with the specified ID")]
+        ResultPerson GetMusicArtist(int artistId);
+
+        [JsonRpcMethod("getMusicArtists", Idempotent = true)]
+        [JsonRpcHelp("Get music artists available for the filtered criteria")]
+        ResultPersons GetMusicArtists(int startIndex, int count, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMusicArtistAlphaListings", Idempotent = true)]
+        [JsonRpcHelp("Get available alphabet listing for the filtered artist selection")]
+        ResultAlphaListing GetMusicArtistAlphaListings(string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("getMusicArtistAlphaIndex", Idempotent = true)]
+        [JsonRpcHelp("Get the starting index of the alpha character as the first letter of the artist Last Name for the filtered artist selection")]
+        ResultInteger GetMusicArtistAlphaIndex(string alpha, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("playMusicTrack", Idempotent = true)]
+        [JsonRpcHelp("Play the selected music track")]
+        ResultGeneric PlayMusicTrack(Guid trackId);
+
+        //// deprecated
+        //[JsonRpcMethod("getPlayingMusicTrackId", Idempotent = true)]
+        //[JsonRpcHelp("get the music track ID currently loadad")]
+        //ResultGuid GetPlayingMusicTrackId();
+
+        [JsonRpcMethod("getPlayingMusicTrack", Idempotent = true)]
+        [JsonRpcHelp("get the music track currently being played (album object containing the playing track)")]
+        ResultMusicAlbum GetPlayingMusicTrack();
+
+        [JsonRpcMethod("setMusicAlbumFavoriateStatus", Idempotent = true)]
+        [JsonRpcHelp("Change the favorite status of a music album")]
+        ResultGeneric SetMusicAlbumFavoriateStatus(bool isFavorited);
+
+        [JsonRpcMethod("executeRemoteControl", Idempotent = true)]
+        [JsonRpcHelp("Execute a control function")]
+        ResultGeneric ExecuteRemoteControl(IMAX.IPT.MediaPlayerNs.Mozaex.RemoteControlFunction function);
+
+        // Media Player - Media Loading Controls
+
+        // Scan the first inserted media found
+        //  order of scanning is:
+        //  1. Player's disc drive
+        //  2. Server's disc drive
+        //  Don't need to implement this on tablet, you should get a auto-notification after a disc is inserted
+        [JsonRpcMethod("scanInsertedMedia", Idempotent = true)]
+        [JsonRpcHelp("Scan media drives for any loaded discs, MovieMetadataAvailable or MusicAlbumMetadataAvailable notification will be sent after the disc is read and metadata options are searched")]
+        ResultInteger ScanInsertedMedia();
+
+        // To load movie, populate the movie 
+        [JsonRpcMethod("loadMedia", Idempotent = true)]
+        [JsonRpcHelp("Begin loading the disc with the supplied metadata information, metadata information can be user defined only for MOVIE, music metadata cannot be defined by the user (user can only choose from one of the metadata selections)")]
+        ResultInteger LoadMedia(TmsMovie mediaMetadata, int selectedMetadataIndex);
+
+        [JsonRpcMethod("registerMediaLoadProgress", Idempotent = true)]
+        [JsonRpcHelp("Registration to receive notifications about media loading progress, progress is available for movie only, notifications will not be sent until registration is made by the client, client should unregister when notifications of progress are no longer needed")]
+        ResultGeneric RegisterMediaLoadProgress(bool receiveNotifications);
+
+        [JsonRpcMethod("getMediaLoadProgress", Idempotent = true)]
+        [JsonRpcHelp(" Retrieve the current media loading progress")]
+        ResultLoadProgress GetMediaLoadProgress();  // notification on change available
+
+
+        // Audio Controls
+        [JsonRpcMethod("setVolume", Idempotent = true)]
+        [JsonRpcHelp("Set the current volume level of the system.")]
+        ResultGeneric SetVolume(double volume);
+
+        [JsonRpcMethod("getVolume", Idempotent = true)]
+        [JsonRpcHelp("Returns the current volume level of the system.")]
+        ResultInteger GetVolume();  // notification on change available
+
+        [JsonRpcMethod("setMute", Idempotent = true)]
+        [JsonRpcHelp("Set the current mute status of the system.")]
+        ResultGeneric SetMute(bool mute);
+
+        [JsonRpcMethod("getMute", Idempotent = true)]
+        [JsonRpcHelp("Returns the current mute status of the system.")]
+        ResultBool GetMute();   // notification on change available
+
+        // Auxiliary Controls
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="inputId"></param>
+        /// <param name="code">
+        ///         
+        /*
+        PlayPause = 0,
+        Stop = 1,
+        Pause = 2,
+        Next = 3,
+        Previous = 4,
+        FastForward = 5, 
+        Rewind = 6,
+
+        RootMenu = 7,
+        PopupMenu = 8,
+
+        Audio = 9,
+        Subtitles = 10,
+        Enter = 11,
+
+        DirectionUp = 12,
+        DirectionDown = 13,
+        DirectionLeft = 14,
+        DirectionRight = 15, 
+
+        // system volume
+        VolumeUp = 16,
+        VolumeDown = 17, 
+        VolumeMute = 18,
+
+        // custom inputs (IR function support depends on device type and manufacture IR signal implementation)
+        Rec = 19,
+        Power = 20,
+        Numeric0 = 21,
+        Numeric1 = 22, 
+        Numeric2 = 23,
+        Numeric3 = 24,
+        Numeric4 = 25,
+        Numeric5 = 26,
+        Numeric6 = 27,
+        Numeric7 = 28,
+        Numeric8 = 29,
+        Numeric9 = 30,
+        ChannelUp = 31,
+        ChannelDown = 32,
+        Cancel = 33,
+        Exit = 34,
+        Info = 35,
+        TvVideoInput = 36,
+        Guide = 37,
+        Prev = 38     (or Back)
+         * */
+        /// </param>
+        /// <returns></returns>
+        [JsonRpcMethod("irPulse", Idempotent = true)]
+        [JsonRpcHelp("Send a IR signal to the specified device")]
+        ResultGeneric IRPulse(int inputId, int code);
+
+        [JsonRpcMethod("irChannel", Idempotent = true)]
+        [JsonRpcHelp("Change the channel of the specified device")]
+        ResultGeneric IRChannel(int inputId, int channel);
+
+        [JsonRpcMethod("getInputChannelPresetsForInput", Idempotent = true)]
+        [JsonRpcHelp("Get presets available for the selected input")]
+        ResultInputPresets GetInputChannelPresetsForInput(int inputId);
+
+        [JsonRpcMethod("addInputChannelPreset", Idempotent = true)]
+        [JsonRpcHelp("Add a channel preset for a specific input")]
+        ResultGeneric AddInputChannelPreset(int inputId, int channel, string displayName);
+
+        [JsonRpcMethod("editInputChannelPreset", Idempotent = true)]
+        [JsonRpcHelp("Edit a channel preset for a specific input")]
+        ResultGeneric EditInputChannelPreset(int presetId, int channel, string displayName);
+
+        [JsonRpcMethod("deleteInputChannelPreset", Idempotent = true)]
+        [JsonRpcHelp("Delete the specific preset from the input preset selections")]
+        ResultGeneric DeleteInputChannelPreset(int presetId);
+
+
+
+
+        // Theatre GUI control
+        [JsonRpcMethod("displayScreenShareButton", Idempotent = true)]
+        [JsonRpcHelp("Check if the movie/music browsing screen should display a screen share button")]
+        ResultBool DisplayScreenShareButton();  // notification on change available
+
+        [JsonRpcMethod("screenShare", Idempotent = true)]
+        [JsonRpcHelp("Change the output of the theatre screen to display movie/music browsing")]
+        ResultGeneric ScreenShare();
+
+        [JsonRpcMethod("displayMovieBrowseOnScreen", Idempotent = true)]
+        [JsonRpcHelp("Update the theatre screen to display movie selections")]
+        ResultGeneric DisplayMovieBrowseOnScreen(int startIndex, 
+            int genreId, int actorId, int directorId, int[] years, int bluray, int favorite, int imax,
+            int threeD, string searchString, int orderByOptions);
+
+        [JsonRpcMethod("displayActorBrowseOnScreen", Idempotent = true)]
+        [JsonRpcHelp("Update the theatre screen to display actor selections")]
+        ResultGeneric DisplayActorBrowseOnScreen(int startIndex,
+            Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("displayDirectorBrowseOnScreen", Idempotent = true)]
+        [JsonRpcHelp("Update the theatre screen to display director selections")]
+        ResultGeneric DisplayDirectorBrowseOnScreen(int startIndex,
+            Guid movieId, string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("displayMovieDetailsOnScreen", Idempotent = true)]
+        [JsonRpcHelp("Update the theatre screen to display movie details")]
+        ResultGeneric DisplayMovieDetailsOnScreen(Guid movieId);
+
+        [JsonRpcMethod("displayMusicAlbumBrowseOnScreen", Idempotent = true)]
+        [JsonRpcHelp("Update the theatre screen to display music album selections")]
+        ResultGeneric DisplayMusicAlbumBrowseOnScreen(int startIndex,
+            int musicArtistId, int musicGenreId, string searchString);
+
+        [JsonRpcMethod("displayMusicArtistBrowseOnScreen", Idempotent = true)]
+        [JsonRpcHelp("Update the theatre screen to display music artist selections")]
+        ResultGeneric DisplayMusicArtistBrowseOnScreen(int startIndex,
+            string searchStringLastName, string searchStringFirstName);
+
+        [JsonRpcMethod("displayMusicAlbumDetailsOnScreen", Idempotent = true)]
+        [JsonRpcHelp("Update the theatre screen to display music album details")]
+        ResultGeneric DisplayMusicAlbumDetailsOnScreen(Guid musicAlbumId);
+
+
+
+        // Power control commands
+        /// retrun errorCode (integer)
+        /// 0 = None,
+        /// 1 = PowerControlDeviceNotConnected
+        /// 2 = PoweringUpInProgress
+        /// 3 = PoweringDownInProgress
+        [JsonRpcMethod("switchSystemPower", Idempotent = true)]
+        [JsonRpcHelp("Power On/Off IPT system")]        
+        ResultInteger SwitchSystemPower(bool onState);
+
+        /// return powerState (integer)
+        /// 1 = On
+        /// 2 = Powering Off
+        /// 3 = Off
+        /// 4 = Powering On
+        [JsonRpcMethod("getSystemPowerState", Idempotent = true)]
+        [JsonRpcHelp("Get current power state of the system")]
+        ResultInteger GetSystemPowerState();   // notificaiton on change available
+
+        [JsonRpcMethod("getSystemPowerProgress", Idempotent = true)]
+        [JsonRpcHelp("Get current power progress of the system")]
+        ResultPowerProgress GetSystemPowerProgress(); // notification on change available
+
+        // Authorized API
+        /// <param name="powerSocket">
+        /// 1 = Left Proector
+        /// 2 = Right Projector
+        /// 3 = Amplifiers
+        /// 4 = RemoteSequenceControl
+        /// 5 = BranchCircuitControl
+        /// </param>
+        [JsonRpcMethod("switchPowerSocket", Idempotent = true)]
+        [JsonRpcHelp("Power On/Off a particular power socket - maintenance login required")]
+        ResultInteger SwitchPowerSocket(int powerSocket, bool onState);
+
+        [JsonRpcMethod("getPowerSocketState", Idempotent = true)]
+        [JsonRpcHelp("Get current power states of all power sockets - maintenance login required")]
+        ResultPowerSocketStates GetPowerSocketStates();   // notification on change available
+
+
+
+        // Maintenance Login related commands
+        [JsonRpcMethod("maintenanceLogin", Idempotent = true)]
+        [JsonRpcHelp("Login for the socket session to run authorized commands")]
+        ResultGeneric MaintenanceLogin(string password);
+
+        [JsonRpcMethod("maintenanceLogout", Idempotent = true)]
+        [JsonRpcHelp("Logout of the current socket session")]
+        ResultGeneric MaintenanceLogout();  // notification on change available
+
+        // Projector related commands
+        [JsonRpcMethod("getProjectorLampStatus", Idempotent = true)]
+        [JsonRpcHelp("Get the lamp hours used and life of both projectors")]
+        ResultProjectorLampstatus GetProjectorLampStatus();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="position">
+        /// 0 = left
+        /// 1 = right
+        /// </param>
+        /// <param name="on"></param>
+        /// <returns></returns>
+        [JsonRpcMethod("switchProjectorLamp", Idempotent = true)]
+        [JsonRpcHelp("Switch the lamp of the selected projector on/off - maintenance login required")]
+        ResultGeneric SwitchProjectorLamp(int position, bool on);
+
+
+
+
+        // Lighting and Room Control
+        [JsonRpcMethod("getLightingPresets", Idempotent = true)]
+        [JsonRpcHelp("Get the available lighting presets")]
+        ResultLightingPresets GetLightingPresets();
+
+        [JsonRpcMethod("selectLightingPreset", Idempotent = true)]
+        [JsonRpcHelp("Activate the selected lighting preset")]
+        ResultGeneric SelectLightingPreset(int presetId);
+
+        [JsonRpcMethod("getSelectedLightingPreset", Idempotent = true)]
+        [JsonRpcHelp("Get the id of the active lighting preset")]
+        ResultInteger GetSelectedLightingPreset();  // notification on change available
+
+        //[JsonRpcMethod("isLightingAdjustmentAvailable", Idempotent = true)]
+        //[JsonRpcHelp("Check if lighting up/down adjustment is available")]
+        //ResultBool IsLightingAdjustmentAvailable();
+
+        [JsonRpcMethod("adjustLightLevel", Idempotent = true)]
+        [JsonRpcHelp("Adjust light level up or down incrementally (only for system configured and supported this function)")]
+        ResultGeneric AdjustLightLevel(bool up);
+
+        [JsonRpcMethod("getLightLevel", Idempotent = true)]
+        [JsonRpcHelp("Get the current light level [0-100] (only for system configured and supported this function), -1 means the system does not support lighting up and down control")]
+        ResultInteger GetLightLevel();  // notification on change available
+
+        [JsonRpcMethod("getLightingEvents", Idempotent = true)]
+        [JsonRpcHelp("Get available lighting events (Preference page)")]
+        ResultLightingEvents GetLightingEvents();
+
+        [JsonRpcMethod("setLightingPresetForEvent", Idempotent = true)]
+        [JsonRpcHelp("Chagne the deault lighting for selected event")]
+        ResultGeneric SetLightingPresetForEvent(int lightingEventId, int lightintPresetId);
+
+        
+        // Curtain control
+        //[JsonRpcMethod("isCurtainAvailable", Idempotent = true)]
+        //[JsonRpcHelp("Check if curtain is configured in the system")]
+        //ResultBool IsCurtainAvailable();
+
+        [JsonRpcMethod("moveCurtain", Idempotent = true)]
+        [JsonRpcHelp("Open or close the curtain")]
+        ResultGeneric MoveCurtain(bool open);
+
+        /// <summary>
+        /// Return value:
+        /// 0 = closed
+        /// 1 = opened
+        /// 2 = Curtain control not available
+        /// </summary>
+        /// <returns></returns>
+        [JsonRpcMethod("getCurtainState", Idempotent = true)]
+        [JsonRpcHelp("Query for the current curtain state")]
+        ResultInteger GetCurtainState();   // notification on change available
+
+
+        // Temperature related Control
+        [JsonRpcMethod("adjustCurrentSetpoint", Idempotent = true)]
+        [JsonRpcHelp("Adjust the current setpoint temperature up/down by 1 unit")]
+        ResultGeneric AdjustCurrentSetpoint(bool up);
+
+        [JsonRpcMethod("getHvacStates", Idempotent = true)]
+        [JsonRpcHelp("Query for the setpoint, actual temperature, fan state, and any error status of the HVAC")]
+        ResultHvacStates GetHvacStates();
+
+
+        //[JsonRpcMethod("getCurrentSetpoint", Idempotent = true)]
+        //[JsonRpcHelp("Query for the current setpoint")]
+        //ResultTemperature GetCurrentSetpoint(); // notification on change available
+
+        //[JsonRpcMethod("getActualTemperature", Idempotent = true)]
+        //[JsonRpcHelp("Query for the actual termperature")]
+        //ResultTemperature GetActualTemperature();   // notification on change available
+
+        /// <summary>
+        /// Fan State:
+        ///     0 = On
+        ///     1 = Auto
+        ///// </summary>   
+        //[JsonRpcMethod("getFanState", Idempotent = true)]
+        //[JsonRpcHelp("Query for the current fan state")]
+        //ResultInteger GetFanState();    // notification on change available
+
+        [JsonRpcMethod("setFanState", Idempotent = true)]
+        [JsonRpcHelp("Set the current fan state")]
+        ResultGeneric SetFanState(int fanState);
+
+        //[JsonRpcMethod("getHvacSystemFault", Idempotent = true)]
+        //[JsonRpcHelp("Query for any Hvac system fault")]
+        //ResultHvacSystemFault GetHvacSystemFault(); // notification on change available
+
+
+        // Security Camera APIs
+        [JsonRpcMethod("getSecurityCameraLocations", Idempotent = true)]
+        [JsonRpcHelp("Retrieve the list of available camera locaitons")]
+        ResultSecurityCameraLocations GetSecurityCameraLocations();
+
+        [JsonRpcMethod("selectSecurityCameraLocation", Idempotent = true)]
+        [JsonRpcHelp("Change the display to show image from the selected security camera")]
+        ResultGeneric SelectSecurityCameraLocation(int id);
+
+        //[JsonRpcMethod("getSelectedSecurityCameraLocation", Idempotent = true)]
+        //[JsonRpcHelp("Get security camera location currently used for display")]
+        //ResultInteger GetSelectedSecurityCameraLocation();
+    }
+}

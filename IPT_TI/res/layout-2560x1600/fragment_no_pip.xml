@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoPipFragment" >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/ImageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="false"
+        android:src="@drawable/ipt_gui_asset_multiview_configurator_full" />
+
+    <ImageButton
+        android:id="@+id/btnFocusAudio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_audio_focus_button" />
+
+    <ImageButton
+        android:id="@+id/btnSelectInput1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_multiview_input_button" />
+
+    <ImageButton
+        android:id="@+id/btnFullScreen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ipt_gui_asset_multiview_go_fullscreen_btn_inactive" />
+
+  	<RelativeLayout
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:layout_centerInParent="true" >
+
+  		<ImageButton
+  		    android:id="@+id/btnSource1"
+  		    android:layout_width="wrap_content"
+  		    android:layout_height="wrap_content"
+  		    android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnSource1"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtNowPlaying1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/now_playing"
+            android:textAppearance="@style/smallActiveText"
+            android:textSize="8pt" />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtSource1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/smallActiveText"
+            android:textSize="8pt" />
+
+        </LinearLayout>
+
+  	</RelativeLayout>
+
+</RelativeLayout>

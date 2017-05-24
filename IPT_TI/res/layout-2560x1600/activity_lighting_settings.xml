@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/global_overlay_color" >
+
+    <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="55dip"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_master_menu"
+            android:src="@drawable/selector_back_button"
+            android:visibility="gone"/>
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtLighting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/lighting"
+            android:textSize="60sp" />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="130dp"
+                android:gravity="center"
+                android:divider="@drawable/diver_line_small"
+                android:showDividers="middle"
+                >
+
+    <Button
+            android:id="@+id/lighting_power_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_lighting_poweron"
+            android:text="@string/lighting_power_on"
+            android:textColor="@color/gray_light"
+            android:textSize="18sp"
+            />
+    <Button
+            android:id="@+id/lighting_power_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_lighting_poweroff"
+            android:text="@string/lighting_power_off"
+            android:textColor="@color/gray_light"
+            android:textSize="18sp"
+            />
+
+        </LinearLayout>
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txt_lighting_control_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="230dp"
+                android:text="@string/lighting_mode"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+
+        <LinearLayout
+                android:id="@+id/ll_lightings_control_mode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="275dp"
+                android:layout_marginLeft="200dp"
+                android:divider="@drawable/diver_line_v"
+                android:showDividers="middle">
+
+                <Button
+                        android:id="@+id/lighting_mode_welcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_mode_welcome"
+                        android:textColor="@color/gray_light"
+
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_mode_movie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_mode_movie"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_mode_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_mode_pause"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+                        />
+
+                </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_lightings_control_mode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="275dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/ll_lightings_control_mode1"
+                android:divider="@drawable/diver_line_v"
+                android:showDividers="middle">
+
+                <Button
+                        android:id="@+id/lighting_mode_game"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_mode_game"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_mode_karaoke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_mode_karaoke"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+                        />
+
+                <Button
+                        android:id="@+id/lighting_mode_lighting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_mode_lighting"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+                        />
+
+                </LinearLayout>
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txt_color_control_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="715dp"
+                android:layout_marginTop="230dp"
+                android:text="@string/lighting_color_set"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        <LinearLayout
+                android:id="@+id/ll_color_control1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="275dp"
+                android:layout_marginLeft="715dp"
+                android:divider="@drawable/diver_line_v"
+                android:showDividers="middle">
+
+
+                <Button
+                        android:id="@+id/lighting_color_change1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_color_change"
+                        android:text="@string/lighting_color_change1"
+                        android:textColor="@color/gray_light"
+
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        />
+                <Button
+                        android:id="@+id/lighting_color_change2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_color_change"
+                        android:text="@string/lighting_color_change2"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_color_change3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_color_change"
+                        android:text="@string/lighting_color_change3"
+                        android:gravity="center"
+
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+
+                        />
+                <Button
+                        android:id="@+id/lighting_color_change4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_color_change"
+                        android:text="@string/lighting_color_change4"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+
+                        />
+
+                </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_color_control2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="275dp"
+                android:layout_toRightOf="@id/ll_color_control1"
+                android:layout_marginLeft="20dp"
+                android:divider="@drawable/diver_line_v"
+                android:showDividers="middle"
+                android:visibility="gone">
+
+                <Button
+                        android:id="@+id/lighting_custom1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_custom"
+                        android:text="@string/lighting_custom1"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+
+                        />
+                <Button
+                        android:id="@+id/lighting_custom2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_custom"
+                        android:text="@string/lighting_custom2"
+                        android:textColor="@color/gray_light"
+
+                        android:textSize="18sp"
+
+                        />
+                <Button
+                        android:id="@+id/lighting_custom3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_lighting_custom"
+                        android:text="@string/lighting_custom3"
+                        android:textColor="@color/gray_light"
+                        android:textSize="18sp"
+
+                        />
+        </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_lightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="470dp"
+            android:layout_marginLeft="205dp"
+            android:divider="@drawable/diver_line_large"
+            android:gravity="center_vertical"
+            android:showDividers="middle"
+            >
+            <Button
+                    android:id="@+id/btn_brightness_div_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lighting_vertical_div"/>
+
+            <ImageButton
+                    android:id="@+id/lighting_lightness_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_lighting_lightness_down"
+                    android:background="#00000000"
+                    />
+
+            <ImageButton
+                android:id="@+id/lighting_lightness_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_lighting_lightness_up"
+                android:background="#00000000"
+                />
+
+    </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="530dp"
+                android:layout_marginLeft="150dp"
+                android:background="@drawable/lighting_brightness_icn"
+                />
+
+        <Button
+                android:id="@+id/lighting_pref_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_lighting_color_change"
+                android:layout_marginLeft="35dp"
+                android:text="RESET ALL MODE"
+                android:visibility="gone"
+                />
+
+        <LinearLayout
+                android:id="@+id/ll_color_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="470dp"
+                android:layout_marginLeft="715dp"
+                android:divider="@drawable/diver_line"
+                android:gravity="center_vertical"
+                android:showDividers="middle"
+                >
+
+                <Button
+                        android:id="@+id/btn_color_div_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/lighting_vertical_div"/>
+
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                                android:id="@+id/ll_color_set1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:divider="@drawable/diver_line"
+                                android:showDividers="middle"
+                                >
+                                <ImageButton
+                                        android:id="@+id/lighting_color0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color0"
+                                        android:background="#00000000"
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color1"
+                                        android:background="#00000000"
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color2"
+                                        android:background="#00000000"
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color4"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color5"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+
+                                        />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                                android:id="@+id/ll_color_set2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:divider="@drawable/diver_line"
+                                android:showDividers="middle"
+                                >
+                                <ImageButton
+                                        android:id="@+id/lighting_color3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color3"
+                                        android:background="#00000000"
+                                        />
+
+
+                                <ImageButton
+                                        android:id="@+id/lighting_color6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color6"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+                                        />
+
+                                <ImageButton
+                                        android:id="@+id/lighting_color7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color7"
+                                        android:background="#00000000"
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color8"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color9"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color10"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color10"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color11"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color12"
+                                        android:background="#00000000"
+                                        android:visibility="gone"
+
+                                        />
+                                <ImageButton
+                                        android:id="@+id/lighting_color13"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/selector_lighting_color13"
+                                        android:background="#00000000"
+
+                                        />
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/lighting_color_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="530dp"
+                android:layout_marginRight="580dp"
+                android:background="@drawable/selector_lighting_color_nochange"
+                />
+
+        <Button
+                android:id="@+id/lighting_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="660dp"
+                android:layout_marginLeft="1000dp"
+                android:drawableRight="@drawable/selector_lighting_save"
+                android:text="@string/lighting_save"
+                android:textColor="@color/gold"
+                android:color="@drawable/selector_lighting_save_color"
+                android:focusable="true"
+                android:background="#00000000"
+                android:textSize="18sp"
+                />
+
+
+        <LinearLayout
+                android:id="@+id/ll_lightings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/ll_lightness"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="40dp"
+
+                >
+
+                <!-- begin lighting seperate control -->
+                <Button
+                        android:id="@+id/lighting_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_top"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        />
+                <Button
+                        android:id="@+id/lighting_screen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_screen"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="55dp"
+                        android:visibility="gone"
+
+                        />
+                <Button
+                        android:id="@+id/lighting_wall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_wall"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="55dp"
+                        android:visibility="gone"
+
+                        />
+                <Button
+                        android:id="@+id/lighting_foot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_light"
+                        android:text="@string/lighting_foot"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="55dp"
+                        android:visibility="gone"
+                        />
+
+                <!-- ennd lighting seperate control -->
+
+                <!-- begin lighting mode control -->
+
+                <!-- end lighting mode control -->
+
+
+        </LinearLayout>
+
+
+        <!--
+        <HorizontalScrollView
+                android:id="@+id/hs_lighting_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/ll_lightings"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="40dp"
+                android:scrollbars="none"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageButton
+                                android:id="@+id/lighting_color0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color0"
+                                android:background="#00000000"
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color1"
+                                android:background="#00000000"
+                                android:layout_marginLeft="35dp"
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color2"
+                                android:background="#00000000"
+                                android:layout_marginLeft="35dp"
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color3"
+                                android:background="#00000000"
+                                android:layout_marginLeft="35dp"
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color4"
+                                android:background="#00000000"
+                                android:layout_marginLeft="50dp"
+                                android:visibility="gone"
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color5"
+                                android:background="#00000000"
+                                android:layout_marginLeft="50dp"
+                                android:visibility="gone"
+
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color6"
+                                android:background="#00000000"
+                                android:layout_marginLeft="35dp"
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color7"
+                                android:background="#00000000"
+                                android:layout_marginLeft="35dp"
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color8"
+                                android:background="#00000000"
+                                android:layout_marginLeft="50dp"
+                                android:visibility="gone"
+
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color9"
+                                android:background="#00000000"
+                                android:layout_marginLeft="50dp"
+                                android:visibility="gone"
+
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color10"
+                                android:background="#00000000"
+                                android:layout_marginLeft="50dp"
+                                android:visibility="gone"
+
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color11"
+                                android:background="#00000000"
+                                android:layout_marginLeft="35dp"
+
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color12"
+                                android:background="#00000000"
+                                android:layout_marginLeft="35dp"
+                                android:visibility="gone"
+
+                                />
+                        <ImageButton
+                                android:id="@+id/lighting_color13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/selector_lighting_color13"
+                                android:background="#00000000"
+                                android:layout_marginLeft="@dimen/bthControlLight_interval"
+
+                                />
+
+                </LinearLayout>
+        </HorizontalScrollView>
+
+
+-->
+
+        <LinearLayout
+                android:id="@+id/ll_lightings_seperate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/hs_lighting_color"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="@dimen/bthControlLight_interval"
+                android:divider="@drawable/diver_line"
+                android:showDividers="middle"
+                android:visibility="gone"
+                >
+                <Button
+                        android:id="@+id/lighting_top_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweron"
+                        android:text="@string/lighting_top"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+
+                        />
+                <Button
+                        android:id="@+id/lighting_top_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweroff"
+                        android:text="@string/lighting_top"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+
+                        />
+
+                <Button
+                        android:id="@+id/lighting_screen_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweron"
+                        android:text="@string/lighting_screen"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+
+                        />
+                <Button
+                        android:id="@+id/lighting_screen_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweroff"
+                        android:text="@string/lighting_screen"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_wall_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweron"
+                        android:text="@string/lighting_wall"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_wall_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweroff"
+                        android:text="@string/lighting_wall"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_foot_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweron"
+                        android:text="@string/lighting_foot"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+                        />
+                <Button
+                        android:id="@+id/lighting_foot_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/selector_lighting_poweroff"
+                        android:text="@string/lighting_foot"
+                        android:background="#00000000"
+                        android:textColor="#ffffdd"
+                        android:textSize="18sp"
+
+                        />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/hs_lighting_color"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="40dp"
+            >
+
+
+
+                <!--         <Button
+                android:id="@+id/lighting_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/selector_lighting_save"
+                android:text="@string/lighting_save"
+                android:background="#00000000"
+                android:textColor="#ffffdd"
+                android:textSize="18sp"
+                android:layout_marginLeft="55dp"
+                android:visibility="gone"
+                /> -->
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:id="@+id/statusNotificationLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="40dp">
+    </FrameLayout>
+
+        <FrameLayout
+                android:id="@+id/masterMenuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="17dp"
+                >
+        </FrameLayout>
+
+
+</RelativeLayout>

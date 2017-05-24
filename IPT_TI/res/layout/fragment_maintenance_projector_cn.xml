@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txt_projector_bulb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="175dp"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="20sp"
+            android:text="@string/maintenance_projector_bulb"
+            />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txt_projector_promt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/txt_projector_bulb"
+            android:layout_toRightOf="@id/txt_projector_bulb"
+            android:layout_marginLeft="100dp"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="20sp"
+            android:text="@string/maintenance_projector_prompt"
+            />
+
+
+    <ImageView
+        android:id="@+id/projectorImgLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="375dp"
+        android:layout_alignLeft="@id/txt_projector_bulb"
+        android:src="@drawable/system_projector_lightbulb_icn" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txt_projectoL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/projectorImgLeft"
+            android:layout_toRightOf="@id/projectorImgLeft"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="20sp"
+            android:text="@string/maintenance_projectorL"
+            />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/projectorTimeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_alignBottom="@id/txt_projectoL"
+            android:layout_toRightOf="@id/txt_projectoL"
+            android:layout_alignLeft="@id/txt_projector_promt"
+            android:text="@string/maintenance_projector_used"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="20sp"
+            />
+
+    <ImageView
+        android:id="@+id/projectorImgRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="430dp"
+        android:layout_alignLeft="@id/txt_projector_bulb"
+        android:src="@drawable/system_projector_lightbulb_icn" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txt_projectoR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/projectorImgRight"
+            android:layout_toRightOf="@id/projectorImgRight"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="20sp"
+            android:text="@string/maintenance_projectorR"
+            />
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/projectorTimeRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_alignBottom="@id/txt_projectoR"
+        android:layout_alignLeft="@id/projectorTimeLeft"
+        android:text="@string/maintenance_projector_used"
+        android:textAppearance="@style/smallInActiveText"
+        android:textSize="20sp"
+         />
+
+    <!--
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/projectorTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="550dp"
+        android:layout_marginRight="180dp"
+        android:text="@string/maintenance_projector_time"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="10pt"
+        android:visibility="gone"
+         />
+ -->
+
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/projectorMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="700dp"
+            android:layout_marginRight="300dp"
+            android:text="@string/maintenance_pcab_status_mail"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="10pt"
+            android:visibility="gone"
+            />
+
+</RelativeLayout>

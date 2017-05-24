@@ -1,0 +1,291 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/global_overlay_color" >
+
+    <FrameLayout
+            android:id="@+id/fragment_volume_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:layout_alignParentBottom="true"
+            >
+    </FrameLayout>
+
+    <!--<include-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="35dp"-->
+            <!--layout="@layout/layout_volume"-->
+            <!--/>-->
+
+    <ImageButton
+        android:id="@+id/btnZaxelAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="90dip"
+        android:layout_marginLeft="110dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_zaxel_add"
+        android:visibility="gone"
+         />
+
+    <ImageButton
+        android:id="@+id/btnZaxelRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+    	android:layout_alignParentLeft="true"
+    	android:layout_marginBottom="80dip"
+    	android:layout_marginLeft="995dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_zaxel_repeat"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:divider="@drawable/diver_line"
+            android:showDividers="middle"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/btnZoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_btn_zoom"
+                />
+
+        <ImageView
+                android:id="@+id/img_nav_div_line_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="100dp"
+                android:src="@drawable/global_div"/>
+
+    </LinearLayout>
+<!--
+    <Button
+	        android:id="@+id/btnZoom"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginBottom="80dip"
+	        android:layout_marginRight="90dip"
+	        android:drawableTop="@drawable/selector_btn_zoom"
+	        android:background="@android:color/transparent"
+	        android:text="2D/3D"
+	        android:textAppearance="@style/smallActiveText"
+	        android:textColor="#ffffff"
+	        android:textSize="6pt" />
+-->
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/clipList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="110dip"
+            android:layout_marginLeft="100dip"
+            android:text="@string/zaxel_clipList"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="16sp"
+            />
+    <com.imax.ipt.ui.util.MySwitch
+            android:id="@+id/btnCliporPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="140dip"
+            android:layout_marginLeft="100dip"
+
+            />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/playList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/clipList"
+            android:layout_alignRight="@id/btnCliporPlay"
+            android:text="@string/zaxel_playList"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="16sp"
+            />
+
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/content_master_menu"
+        android:src="@drawable/selector_back_button"
+        android:visibility="gone"
+            />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dip"
+        android:text="@string/now_playing"
+        android:textAppearance="@style/smallInActiveText"
+        android:textSize="50sp" />
+
+    <!--
+    <ImageButton
+        android:id="@+id/btnVolMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="50dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_vol_mute_button" />
+-->
+
+    <ListView
+        android:id="@+id/play_list"
+        android:layout_width="600dip"
+        android:layout_height="500dip"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="450dp"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        ></ListView>
+
+    <!-- Buttons |< << [] || >> >| -->
+    <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
+            layout="@layout/layout_play_control"
+            />
+
+<!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="95dip"
+        android:layout_marginLeft="320dip"
+        android:visibility="gone"
+         >
+
+        <ImageButton
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_remote_full_prev_button" />
+
+        <ImageButton
+            android:id="@+id/btnRew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_remote_full_rew_menu_button"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dip"
+        android:layout_marginLeft="495dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_remote_full_stop_button"
+
+        />
+
+    <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dip"
+        android:layout_marginLeft="640dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_remote_full_pause_button" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dip"
+        android:layout_marginLeft="785dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_remote_full_play_button" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="95dip"
+        android:layout_marginLeft="935dip"
+        android:visibility="gone"
+         >
+
+        <ImageButton
+            android:id="@+id/btnFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_remote_full_ff_button" />
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_remote_full_next_button" />
+    </LinearLayout>
+
+-->
+    <FrameLayout
+         android:id="@+id/statusNotificationLayout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+            >
+    </FrameLayout>
+
+</RelativeLayout>

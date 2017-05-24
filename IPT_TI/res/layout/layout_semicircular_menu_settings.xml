@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.imax.ipt" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        >
+        <com.imax.ipt.ui.widget.semicircular.SemiCircularLayout
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="0dip"
+            custom:initialRadius="@integer/settings_radius_int"
+            custom:childSize="90dip"
+            custom:fromDegrees="110"
+            custom:toDegrees="240"/>
+
+        <FrameLayout
+            android:id="@+id/control_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="90dip" >
+
+                <ImageView
+                    android:id="@+id/control_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/selector_menu_settings_button" />
+
+                <com.imax.ipt.ui.layout.IPTTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/control_hint"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/settings"
+                    android:textSize="@dimen/menu_txt_size" />
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+</merge>

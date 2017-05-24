@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtAlphaOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="34dip"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="@style/ActiveText"
+            android:textSize="15pt"
+            android:visibility="gone"/>
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:visibility="visible">
+
+        <ImageView
+                android:id="@+id/pickerCircle"
+                android:layout_width="83dp"
+                android:layout_height="83dp"
+                android:src="@drawable/ipt_gui_asset_alpha_slider_circle"
+                android:visibility="gone"/>
+
+    </FrameLayout>
+
+
+    <Button
+            android:id="@+id/txtOption"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="0dp"
+            android:background="@drawable/ipt_gui_asset_alpha_slider_circle_transparent2"
+            android:textAppearance="@style/smallActiveText"
+            android:textColor="@drawable/selector_picker_btntxt_color"
+            android:textSize="15sp" />
+
+<com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtPickerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>

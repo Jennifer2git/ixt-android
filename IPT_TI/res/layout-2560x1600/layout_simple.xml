@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/btnSimple"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginBottom="30dip"
+	        android:layout_marginRight="170dip"
+	        android:text="@string/control_type_simple"
+	        android:textAppearance="@style/smallActiveText"
+	        android:textSize="9pt"
+         />
+        <com.imax.ipt.ui.util.MySwitch
+            android:id="@+id/btnSimpleFull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+        	android:layout_alignParentRight="true"
+        	android:layout_marginBottom="22dp"
+        	android:layout_marginRight="60dp"
+
+            />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/btnFull"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginBottom="30dip"
+	        android:layout_marginRight="20dip"
+	        android:text="@string/control_type_full"
+	        android:textAppearance="@style/smallInActiveText"
+	        android:textSize="9pt"
+	         />
+
+</RelativeLayout>

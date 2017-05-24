@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtLogginNote"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:ellipsize="end"
+            android:padding="10dp"
+            android:text="@string/login_info"
+            android:textAppearance="@style/smallInActiveText"
+            android:textSize="18sp" />
+    <EditText
+            android:id="@+id/txtLogin"
+            android:layout_width="540dp"
+            android:layout_height="60dip"
+            android:layout_below="@id/txtLogginNote"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:drawableBottom="@drawable/edit_text_line"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/gray_light" >
+    </EditText>
+
+    <ImageView
+            android:id="@+id/mImgViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtLogin"
+            android:padding="20dp"
+            android:layout_alignBottom="@id/txtLogin"
+            android:src="@drawable/dvd_save_load_icn"
+            android:visibility="gone"
+            />
+
+</RelativeLayout>

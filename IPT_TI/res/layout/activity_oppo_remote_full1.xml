@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/global_overlay_color"
+
+        >
+
+    <ImageView
+            android:id="@+id/img_blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/global_overlay_color3"
+            android:visibility="gone"
+            />
+
+
+    <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            layout="@layout/fragment_navi_menu"
+            />
+    <FrameLayout
+            android:id="@+id/fragment_volume_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:layout_alignParentBottom="true"
+            >
+    </FrameLayout>
+
+<!--<include-->
+		<!--android:layout_width="wrap_content"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_centerHorizontal="true"-->
+		<!--android:layout_alignParentBottom="true"-->
+		<!--android:layout_marginBottom="35dp"-->
+		<!--layout="@layout/layout_volume"-->
+		<!--/>-->
+
+    <!-- Buttons |< << [] || >> >| -->
+	<include
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="120dp"
+			layout="@layout/layout_play_control"
+			/>
+
+    <RelativeLayout
+            android:id="@+id/rlayout_arrow_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_centerHorizontal="true"
+            >
+
+        <ImageView
+                android:id="@+id/img_arrow_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/arrow_control_bg"
+                android:visibility="invisible"
+                />
+
+        <ImageView
+                android:id="@+id/img_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/player_poster_mask"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:visibility="gone"
+                />
+        <!--
+        <ImageButton
+                android:id="@+id/btnCloseControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:padding="15dp"
+                android:background="@drawable/dvd_donothing_icn"
+                android:visibility="gone"
+                />
+        -->
+
+        <ImageView
+                android:id="@+id/imgOkBg"
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/remote_enter_icn"
+                android:clickable="false"
+                android:visibility="gone"
+                />
+
+        <Button
+                android:id="@+id/btnOk2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_remote_arrow_ok_button"
+                android:alpha="1"
+                android:text=""
+                android:textSize="50sp"
+
+                />
+<!--
+                android:background="@drawable/player_poster_mask"
+
+-->
+
+        <ImageButton
+                android:id="@+id/btnRigth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_arrow_control"
+                android:layout_marginLeft="-40dp"
+                android:background="@drawable/selector_remote_arrow_rigth_button"
+                />
+
+        <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/selector_remote_arrow_left_button"
+                />
+        <ImageButton
+                android:id="@+id/btnUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_arrow_control"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/selector_remote_arrow_up_button"
+                />
+        <ImageButton
+                android:id="@+id/btnDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_arrow_control"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/selector_remote_arrow_down_button"
+                />
+
+
+    </RelativeLayout>
+
+
+    <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/disNowPlayingTitle"
+            android:scrollbarStyle="insideInset"
+            android:singleLine="true"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/txtNowPlayTitle"
+            android:text="@string/titles_nav"/>
+
+    <LinearLayout
+            android:id="@+id/layout_movie_infor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/diver_line_small"
+            android:showDividers="middle"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/actors"
+                android:textSize="17sp"
+                />
+<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/global_div"
+        />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtRating"
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/actors"
+                android:textSize="17sp"
+
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="-5dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/global_div"
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="@string/actors"/>
+
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+            android:visibility="gone">
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dip"
+            android:scrollbarStyle="insideInset"
+            android:singleLine="true"
+            android:textAppearance="@style/ActiveText"
+            android:textSize="62sp" />
+    </HorizontalScrollView>
+
+<!--
+    <View
+        style="@style/InActiveText"
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="510dip"
+        android:layout_marginTop="120dip"
+        android:background="@drawable/outerring" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="620dip"
+        android:layout_marginTop="255dip"
+        android:text="@string/ok"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="37sp" />
+        -->
+    <!--android:textSize="18pt" -->
+
+
+    <!--
+    <ProgressBar
+        android:id="@+id/seekBarDuration"
+        android:layout_width="300dip"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        android:visibility="visible"
+        android:progressDrawable="@drawable/selector_progress_seek_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:max="100"
+
+        />
+-->
+
+    <FrameLayout
+         android:id="@+id/statusNotificationLayout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp">
+    </FrameLayout>
+
+    <!--
+    <FrameLayout
+        android:id="@+id/masterMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+            >
+    </FrameLayout>
+    -->
+
+</RelativeLayout>

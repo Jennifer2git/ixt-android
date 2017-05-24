@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="transparent">
+
+<!--     <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/vol"/>
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/ipt_gui_asset_vol_bar_fill_section_active">
+    </item> -->
+     <item android:id="@android:id/background" >
+
+        <nine-patch android:src="@drawable/vol"/>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <nine-patch android:src="@drawable/vol_active" />
+        </clip>
+
+    </item>
+
+</layer-list>

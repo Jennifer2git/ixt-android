@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_menu" >
+
+
+    <!--
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        >
+
+        <Button
+            android:id="@+id/btnZoomNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ipt_gui_asset_video_mode_2d_inactive"
+            android:text="2D"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/btnZoomWide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ipt_gui_asset_video_mode_2d_inactive"
+            android:text="3D"
+            android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+
+    -->
+    <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:orientation="vertical"
+            >
+
+        <Button
+                android:id="@+id/btnZoomNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lighting_alllights_active_btn"
+                android:text="2D"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+
+        <Button
+                android:id="@+id/btnZoomWide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lighting_alllights_active_btn"
+                android:textSize="20sp"
+                android:text="3D"
+                android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/linearLayout1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_close_button"
+                android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layoutAspectRatio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+         >
+
+        <Button
+            android:id="@+id/btnAspectRatioHd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ipt_gui_asset_video_mode_2d_inactive"
+            android:text="HD"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnAspectRatioScope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ipt_gui_asset_video_mode_2d_inactive"
+            android:text="Scope"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/gray_light_catalogue">
+
+	<!--
+	<com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+			android:id="@+id/list_movie_sub_sort"
+			android:layout_width="fill_parent"
+			android:layout_height="150dp"
+			android:layout_marginLeft="50dp"
+			android:layout_marginTop="60dp"
+			>
+
+	</com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+-->
+<!--
+	<com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+			android:id="@+id/horizonlistview_movie_sort_subitem"
+			android:layout_width="wrap_content"
+			android:layout_height="99dp"
+	        android:visibility="gone"
+			>
+
+	</com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+-->
+
+	<TextView
+			android:id="@+id/test"
+			android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="40sp"
+			android:text="@string/titles"/>
+	<GridView
+			android:id="@+id/grid_movie_item"
+			android:layout_width="1240dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="135dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="10dp"
+			android:layout_marginBottom="70dp"
+			android:numColumns="7"
+			android:columnWidth="30dp"
+			>
+
+	</GridView>
+
+	<!---->
+
+	<!--
+		<com.imax.ipt.ui.widget.gridview.TwoWayGridWidget
+				android:id="@+id/gridview"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_marginTop="110dip"
+				android:background="@color/gray_light_catalogue"
+				android:fastScrollEnabled="false"
+				android:focusable="true"
+				android:listSelector="@color/electric_blue"
+				app:cacheColorHint="@android:color/transparent"
+				app:columnWidth="115dip"
+				app:gravity="center"
+				app:numColumns="7"
+				app:numRows="auto_fit"
+				app:rowHeight="170dip"
+				app:scrollDirectionLandscape="horizontal"
+				app:stretchMode="spacingWidthUniform"
+				>
+		</com.imax.ipt.ui.widget.gridview.TwoWayGridWidget>
+
+		-->
+
+	<LinearLayout
+			android:id="@+id/layout_pager_dot"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="630dp"
+			android:orientation="horizontal"
+			android:layout_weight="1"
+			android:divider="@drawable/diver_line"
+			android:showDividers="middle">
+
+		<ImageView
+				android:id="@+id/imge_viewpager_dot1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/selector_viewpager_dot"
+				/>
+		<ImageView
+				android:id="@+id/imge_viewpager_dot2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/selector_viewpager_dot"
+				android:visibility="visible"/>
+
+		<ImageView
+				android:id="@+id/imge_viewpager_dot3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/selector_viewpager_dot"
+				android:visibility="visible"/>
+
+	</LinearLayout>
+
+</RelativeLayout>

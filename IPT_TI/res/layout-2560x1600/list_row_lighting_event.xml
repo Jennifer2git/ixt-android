@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtEvent"
+        style="@style/smallInActiveText"
+        android:layout_width="425dip"
+        android:layout_height="wrap_content"
+        android:text="IPTTextView"
+        android:textSize="8pt" />
+
+    <Button
+        android:id="@+id/btnPreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_pref_lighting_preset_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        style="@style/smallInActiveText"
+        android:id="@+id/txtPreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPTTextView"
+        android:textSize="8pt" />
+
+</LinearLayout>

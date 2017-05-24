@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/global_overlay_color">
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/txtTouchPanel1"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="175dp"
+                android:text="@string/other_version_pc"
+                android:textSize="@dimen/txtVersionName"
+                />
+
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/versionPc"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/txtTouchPanel1"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/txtTouchPanel1"
+                android:text="v1.0"
+                android:textSize="@dimen/txtVersionNum"/>
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/IPTTextView02"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtTouchPanel1"
+                android:layout_below="@id/txtTouchPanel1"
+                android:layout_marginTop="@dimen/disSettingVersionInfor"
+                android:text="@string/other_version_amx"
+                android:textSize="@dimen/txtVersionName"
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/versionAmx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/IPTTextView02"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/IPTTextView02"
+                android:text="v1.0"
+                android:textAppearance="@style/smallInActiveText"
+                android:textSize="@dimen/txtVersionNum"
+                />
+
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/IPTTextView03"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtTouchPanel1"
+                android:layout_below="@id/IPTTextView02"
+                android:layout_marginTop="@dimen/disSettingVersionInfor"
+                android:text="@string/other_version_android"
+                android:textSize="@dimen/txtVersionName"
+
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/versionAndroid"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/IPTTextView03"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/IPTTextView03"
+                android:text="v1.0"
+                android:textSize="@dimen/txtVersionNum"
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/IPTTextView04"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtTouchPanel1"
+                android:layout_below="@id/IPTTextView03"
+                android:layout_marginTop="@dimen/disSettingVersionInfor"
+                android:text="@string/other_version_sn"
+                android:textSize="@dimen/txtVersionName"
+                />
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/serialNum"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/IPTTextView04"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/IPTTextView04"
+                android:text="v1.0"
+                android:textSize="@dimen/txtVersionNum"
+
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/IPTTextView05"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtTouchPanel1"
+                android:layout_below="@id/IPTTextView04"
+                android:layout_marginTop="@dimen/disSettingVersionInfor"
+                android:text="@string/other_version_hardware"
+                android:textSize="@dimen/txtVersionName"
+                />
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/versionHardware"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/IPTTextView05"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/IPTTextView05"
+                android:text="v1.0"
+                android:textSize="@dimen/txtVersionNum"
+
+                />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+                android:id="@+id/versionUpdate"
+                style="@style/smallInActiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/IPTTextView05"
+                android:layout_alignLeft="@id/IPTTextView05"
+
+                android:layout_marginTop="@dimen/disSettingVersionInfor"
+                android:text="@string/other_version_update"
+                android:textSize="@dimen/txtVersionName"
+
+                />
+
+        <ImageButton
+                android:id="@+id/btnCheckSoftwareUpdate"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/versionUpdate"
+                android:layout_alignBottom="@id/versionUpdate"
+                android:padding="10dp"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#00000000"
+                android:src="@drawable/lobby_settings_icn"
+                />
+
+</RelativeLayout>

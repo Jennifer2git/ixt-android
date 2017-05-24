@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/global_overlay_color">
+
+
+    <!--
+    <ImageView
+            android:id="@+id/img_prefe_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="380dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/system_vertical_div"
+            />
+
+    <Button
+            android:id="@+id/btn_version"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/img_prefe_div"
+            android:layout_marginLeft="185dp"
+            android:text="@string/version"
+            android:textColor="@color/gold"
+            android:textSize="20sp"
+            android:background="@color/gray_deep"/>
+-->
+     <FrameLayout
+        android:id="@+id/menuVersion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/menuLibraryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+    </FrameLayout>
+
+    <FrameLayout
+            android:id="@+id/statusNotificationLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            >
+    </FrameLayout>
+
+    <FrameLayout
+            android:id="@+id/masterMenuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true">
+    </FrameLayout>
+
+
+</RelativeLayout>

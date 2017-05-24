@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="300dp"
+    android:orientation="horizontal"
+    tools:context=".ChannelPresetFragment" >
+
+    <GridView
+        android:id="@+id/gridInputChannelPresets"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:numColumns="5" >
+    </GridView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_close_button" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btnAddNew"
+                android:layout_width="140px"
+                android:layout_height="140px"
+                android:background="@android:color/transparent"
+                android:src="@drawable/selector_tv_fav_add_new_button"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="140px"
+                android:layout_height="140px"
+                android:background="@android:color/transparent"
+                android:src="@drawable/selector_tv_fav_delete_button"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/tglEditMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/selector_tv_fav_edit_button"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+</LinearLayout>

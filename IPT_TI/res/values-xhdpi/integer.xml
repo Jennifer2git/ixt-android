@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--menu_item_layout_radius -->
+	<integer name="input_radius_int">350</integer>
+	<integer name="settings_radius_int">140</integer>
+	<integer name="rooms_radius_int">110</integer>
+</resources>

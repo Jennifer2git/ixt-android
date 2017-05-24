@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.imax.ipt"
+          android:versionCode="12"
+          android:versionName="PAD-Android_3.1_Release">
+	      <!-- note <date:20170523>-->
+
+	<uses-sdk
+			android:minSdkVersion="17"
+			android:targetSdkVersion="19"/>
+
+	<supports-screens
+			android:largeScreens="true"
+			android:normalScreens="true"
+			android:smallScreens="true"
+			android:resizeable="true"
+			android:anyDensity="true">
+
+	</supports-screens>
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.BATTERY_STATS"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+
+	<application
+			android:name="com.imax.ipt.IPT"
+			android:allowBackup="true"
+			android:icon="@drawable/icon"
+			android:label="@string/app_name"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+		<activity
+				android:name="com.imax.ipt.ui.activity.WelcomeActivity"
+				android:label="@string/app_name"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+
+		<activity
+				android:name="com.imax.ipt.ui.activity.LobbyActivity"
+				android:label="@string/app_name"
+				android:noHistory="true"
+				android:launchMode="singleTask"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+			<intent-filter>
+				<action android:name="com.imax.ipt.ui.activity.LobbyActivity.action_show_lobby"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+
+		</activity>
+
+		<activity
+				android:name="com.imax.ipt.ui.activity.DownloadActivity"
+				android:launchMode="singleInstance"
+				android:label="@string/app_name"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoDisplay"
+				android:windowActionBar="false">
+		</activity>
+
+
+		<activity
+				android:name="com.imax.ipt.ui.activity.power.SystemOffActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false"
+				android:windowSoftInputMode="stateHidden">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.movie.MovieLibraryActivity"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false"
+				android:windowSoftInputMode="stateHidden">
+			<intent-filter>
+				<action android:name="com.imax.ipt.ui.activity.input.movie.show_movie_library"></action>
+			</intent-filter>
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.music.MusicLibraryActivity"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false"
+				android:windowSoftInputMode="stateHidden">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.music.MusicRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.music.MusicRemoteFullActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.MediaRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.movie.MovieRemoteFullActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.movie.MozaxRemoteControlActivity"
+				android:launchMode="singleTop"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+
+			<intent-filter>
+				<action android:name="com.imax.ipt.ui.activity.input.movie.MozaxRemoteControl"></action>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.gaming.GamingActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+
+			<intent-filter>
+				<action android:name="com.imax.ipt.ui.activity.input.gaming"></action>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.karaoke.KaraokeActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+			<intent-filter>
+				<action android:name="com.imax.ipt.ui.activity.input.karaoke"></action>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.media.MediaDeviceActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.security.SecurityCamActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.tv.TVActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.tv.TVRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.tv.TVRemoteFullActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.tv.AppleTvActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.RemoteControlUnavailalbleActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.room.ClimateActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.room.CurtainsActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.room.LightingActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.room.LightingSettingsActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.settings.maintenance.MaintenceActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.settings.multiview.MultiViewActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<!--
+
+		<activity
+			android:name="com.imax.ipt.ui.activity.settings.MultiViewFourUpActivity"
+			android:noHistory="true"
+			android:screenOrientation="landscape"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowActionBar="false" >
+		</activity>
+		<activity
+			android:name="com.imax.ipt.ui.activity.settings.MultiViewThreeBottomActivity"
+			android:noHistory="true"
+			android:screenOrientation="landscape"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowActionBar="false" >
+		</activity>
+		<activity
+			android:name="com.imax.ipt.ui.activity.settings.MultiViewThreeRigthActivity"
+			android:noHistory="true"
+			android:screenOrientation="landscape"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowActionBar="false" >
+		</activity>
+		<activity
+			android:name="com.imax.ipt.ui.activity.settings.MultiViewThreeTopActivity"
+			android:noHistory="true"
+			android:screenOrientation="landscape"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowActionBar="false" >
+		</activity>
+		-->
+		<activity
+				android:name="com.imax.ipt.ui.activity.settings.preferences.PreferencesActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.settings.preferences.OtherActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.power.SystemCountUpDownActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.AddMediaActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@style/Theme.Transparent"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.AddMetaActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:windowSoftInputMode="adjustResize|stateHidden">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.battery.BatteryActivity"
+				android:noHistory="true">
+		</activity>
+
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.gaming.GamingRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<!--<activity-->
+				<!--android:name="com.imax.ipt.ui.activity.input.movie.MovieRemoteActivity"-->
+				<!--android:noHistory="true"-->
+				<!--android:screenOrientation="landscape"-->
+				<!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen"-->
+				<!--android:windowActionBar="false">-->
+		<!--</activity>-->
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.media.MediaDeviceRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.SonyRemoteFullActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.SonyRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.OppoRemoteFullActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.HimediaActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.MymovieActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.KaleidoscopeActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.OppoRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.PrimaRemoteActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.input.gdc.GdcActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.ExternalInputActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.ZaxelActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+		<activity
+				android:name="com.imax.ipt.ui.activity.media.ZaxelRemoteFullActivity"
+				android:noHistory="true"
+				android:screenOrientation="landscape"
+				android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				android:windowActionBar="false">
+		</activity>
+
+		<receiver android:name="com.imax.ipt.service.IPTBootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name="com.imax.ipt.service.AppUpdateReceiver">
+			<intent-filter>
+				<action android:name="com.imax.ipt.service.BROADCAST_ACTION_APP_UPDATE_AVAILABLE"/>
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.imax.ipt.service.HomePremiereReceiver">
+			<intent-filter>
+				<action android:name="com.imax.ipt.service.BROADCAST_HOME_PREMIERE"/>
+			</intent-filter>
+		</receiver>
+
+		<!-- remove this language receiver register to connecteservice-->
+		<!--<receiver android:name="com.imax.ipt.service.SystemLanguageChangeReceiver">-->
+			<!--<intent-filter>-->
+				<!--<action android:name="android.intent.action.LOCALE_CHANGED"/>-->
+			<!--</intent-filter>-->
+		<!--</receiver>-->
+
+		<receiver android:name="com.imax.ipt.service.WifiReceiver">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+			</intent-filter>
+		</receiver>
+		<!--
+		<receiver android:name=".service.BatteryReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BATTERY_LOW"/>
+				<action android:name="android.intent.action.BATTERY_OKAY"/>
+			</intent-filter>
+		</receiver>
+		-->
+		<receiver android:name="com.imax.ipt.service.PingBroadcastReceiver">
+		</receiver>
+
+		<receiver
+				android:name="com.imax.ipt.PackageReplacedReceiver"
+				android:enabled="true"
+				android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.ACTION_MY_PACKAGE_REPLACED"/>
+				<action android:name="android.intent.action.PACKAGE_REPLACED"/>
+				<data android:scheme="package"/>
+			</intent-filter>
+		</receiver>
+
+		<service android:name="com.imax.ipt.service.IPTService">
+
+		</service>
+
+		<service android:name="com.imax.ipt.service.ConnecteService">
+			<action android:name="android.intent.action.MAIN"/>
+		</service>
+
+		<service
+				android:name="com.imax.ipt.service.LogManagementService"
+				android:enabled="true"
+				android:exported="true">
+		</service>
+	</application>
+
+</manifest>

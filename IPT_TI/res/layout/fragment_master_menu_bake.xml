@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageButton
+        android:id="@+id/btnMenuMaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/content_master_menu"
+        android:src="@drawable/selector_master_menu_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="30dip"
+        android:layout_marginTop="85dip"
+        android:text="@string/menu"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/masterMenuAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:clickable="true">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imgBackground"
+                android:layout_width="500dp"
+                android:layout_height="800dp"
+                android:clickable="true" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btnMenuMasterActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="310dip"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_master_menu"
+            android:src="@drawable/ipt_gui_asset_master_menu_btn_active" />
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="340dip"
+            android:layout_marginTop="95dip"
+            android:text="@string/menu"
+            android:textAppearance="@style/smallActiveText"
+            android:textSize="@dimen/menu_txt_size" />
+
+        <FrameLayout
+            android:id="@+id/fragmentRooms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true" >
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fragmentInputs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fragmentSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btnPowerOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-10dip"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_btn_on_off"
+            android:src="@drawable/selector_menu_power_button" />
+    </RelativeLayout>
+
+</RelativeLayout>

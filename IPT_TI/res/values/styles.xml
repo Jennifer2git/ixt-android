@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- -->
+
+
+    <style name="smallActiveText">
+        <item name="android:textColor">#f0bf59</item>
+    </style>
+
+    <style name="smallInActiveText">
+        <item name="android:textColor">#e5e6e7</item>
+    </style>
+
+    <!--<item name="android:textColor">#ffffff</item> -->
+    <style name="ActiveText">
+
+        <item name="android:textColor">#f0bf59</item>
+    </style>
+
+    <style name="InActiveText">
+        <item name="android:textColor">#e5e6e7</item>
+
+    </style>
+
+    <style name="BrigthActiveText">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:shadowColor">#74ccf9</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">0.0</item>
+        <item name="android:shadowRadius">10.0</item>
+        <item name="android:alpha">3.0</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="mProgress_circle">
+        <item name="android:indeterminateDrawable">@drawable/progressbar_circle</item>
+        <item name="android:minWidth">250dp</item>
+        <item name="android:minHeight">250dp</item>
+        <item name="android:maxWidth">300dp</item>
+        <item name="android:maxHeight">300dp</item>
+    </style>
+
+
+    <style name="progress_circle_small">
+        <item name="android:indeterminateDrawable">@drawable/progressbar_circle2</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:maxWidth">80dp</item>
+        <item name="android:maxHeight">80dp</item>
+    </style>
+
+    <!-- add for new ui-->
+    <style name="textLobby">
+        <item name="android:textColor">#e5e6e7</item>
+    </style>
+
+    <style name="notificationText_normal">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray_light</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+
+    </style>
+
+    <!--navigation movie sort-->
+    <style name="nav_movie_sortText">
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineSpacingMultiplier">1.0</item>
+
+    </style>
+
+    <style name="mprogress_horizon">
+        <item name="android:indeterminateDrawable">@drawable/seekbar_horizontal</item>
+        <item name="android:drawable">@drawable/seekbar_horizontal</item>
+        <item name="android:minWidth">250dp</item>
+        <item name="android:minHeight">5dp</item>
+        <item name="android:maxWidth">250dp</item>
+        <item name="android:maxHeight">5dp</item>
+    </style>
+
+    <style name="dialog_Translucent_NoTitle" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

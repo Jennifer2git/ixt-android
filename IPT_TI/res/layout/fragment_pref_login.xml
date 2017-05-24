@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+       <EditText
+        android:id="@+id/txtLogin"
+        android:layout_width="400dp"
+        android:layout_height="60dip"
+        android:layout_marginLeft="480dp"
+        android:layout_marginTop="200dp"
+        android:drawableBottom="@drawable/edit_text_line"
+        android:background="@android:color/transparent"
+        android:hint="@string/login_info"
+        android:clickable="true"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@color/gray_light" >
+    </EditText>
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLogin"
+        android:layout_alignLeft="@id/txtLogin"
+        android:ellipsize="end"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="@string/login_info"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <ImageButton
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtLogin"
+            android:padding="20dp"
+            android:layout_alignBottom="@id/txtLogin"
+            android:src="@drawable/dvd_save_load_icn"
+            android:background="@android:color/transparent"
+            />
+
+    <!--
+    <ImageView
+            android:id="@+id/mImgViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtLogin"
+
+            android:padding="20dp"
+            android:layout_alignBottom="@id/txtLogin"
+            android:src="@drawable/dvd_save_load_icn"
+            android:visibility="gone"
+            />
+    -->
+
+
+</RelativeLayout>

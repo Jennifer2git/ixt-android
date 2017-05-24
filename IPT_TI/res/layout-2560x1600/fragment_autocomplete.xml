@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_gravity="right"
+              android:gravity="center|right"
+        android:background="@android:color/transparent"
+        android:divider="@drawable/diver_line"
+        android:showDividers="middle">
+
+
+
+    <!--
+            android:layout_width="@dimen/txtSearch_width"
+        android:layout_height="@dimen/txtSearch_height"
+
+    android:background="@drawable/edit_text_holo_dark"
+	-->
+    <AutoCompleteTextView
+        android:id="@+id/txtSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:singleLine="true"
+        android:textColor="@color/gold"
+        android:imeOptions="actionSearch"
+        android:hint="SEARCH"
+        android:textColorHint="@color/gray_light"
+        />
+    <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/catalogue_search_icn"
+            />
+
+
+</LinearLayout>

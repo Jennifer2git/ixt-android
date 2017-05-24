@@ -1,0 +1,80 @@
+<resources>
+
+    <dimen name="outerring_diameter">270dip</dimen>
+    <dimen name="image_logo_margin_left">0dp</dimen>
+    <dimen name="image_logo_margin_top">0dp</dimen>
+
+    <!--
+    <dimen name="image_logo_margin_top">250dp</dimen>
+    <dimen name="image_logo_margin_left">290dp</dimen>
+    -->
+    <dimen name="txt_logo_margin_left">650dp</dimen>
+    <dimen name="txt_logo_margin_top">400dp</dimen>
+    <dimen name="menu_txt_size">17sp</dimen>
+
+    <!-- Menu -->
+    <!-- fragment_menu_library -->
+    <!-- MenuView -->
+    <dimen name="minWidth">260dp</dimen>
+    <dimen name="menuView_marginLeft">90dp</dimen>
+    <!-- txtTitle -->
+    <dimen name="txtTitle_marginLeft">100dp</dimen>
+    <dimen name="txtTitle_padding">10dp</dimen>
+
+    <!-- checkableMenu -->
+    <dimen name="checkableMenu_marginLeft">30dp</dimen>
+    <!-- checkableSubMenu -->
+    <dimen name="checkableSubMenu_width">110dp</dimen>
+    <dimen name="checkableSubMenu_marginTop">100dp</dimen>
+    <dimen name="checkableSubMenu_marginLeft">230dip</dimen>
+
+    <!-- searchFragment -->
+    <dimen name="txtSearch_width">400dp</dimen>
+    <dimen name="txtSearch_height">50dp</dimen>
+
+
+    <!-- lighting settings -->
+
+    <dimen name="bthControlLight_interval">20dp</dimen>
+    <dimen name="lobby_div_line_interval">50dp</dimen>
+    <dimen name="nav_global_div_line_interval">20dp</dimen>
+    <dimen name="nav_global_div_line_interval_small">10dp</dimen>
+
+    <!--menu_item_layout_radius -->
+    <!--
+    <item name="menu_item_input_radius" type="dimen" format="integer">350</item>
+    <item name="menu_item_settings_radius" type="dimen" format="integer">110</item>
+    <item name="menu_item_room_radius" type="dimen" format="integer">110</item>
+    -->
+    <!--settings -->
+    <dimen name="txtSettingMenuName">40sp</dimen>
+    <dimen name="txtVersionName">18sp</dimen>
+    <dimen name="txtVersionNum">20sp</dimen>
+    <dimen name="txtSettingNormal">18sp</dimen>
+    <dimen name="txtSettingBig">20sp</dimen>
+    <dimen name="txtSettingSmall">16sp</dimen>
+    <dimen name="disSettingVersionInfor">60dp</dimen>
+
+    <!-- lobby -->
+    <dimen name="itemChannelMargin">10dp</dimen>
+
+    <!-- movie library  -->
+    <!-- movie discription  -->
+    <dimen name="paddingPlaybtn">15dp</dimen>
+    <dimen name="disDivLine2B">40dp</dimen>
+    <dimen name="txtDirector">18sp</dimen>
+    <dimen name="txtNowPlayTitle">28sp</dimen>
+
+    <dimen name="txtVerInforTitle">16sp</dimen>
+    <dimen name="txtVerInfor">18sp</dimen>
+
+    <!-- movie playing page -->
+    <dimen name="disNowPlayingTitle">80dp</dimen>
+
+    <!-- lighting setting page -->
+    <dimen name="disMarginLeft">34dp</dimen>
+    <dimen name="disMarginTop">50dp</dimen>
+
+<!-- fragment dialog number input  -->
+    <dimen name="txtPin">20sp</dimen>
+</resources>

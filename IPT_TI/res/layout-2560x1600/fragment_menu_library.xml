@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+     >
+
+    <!--
+    <com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+            android:id="@+id/list_movie_sort"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="310dp"
+            >
+
+    </com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+
+    <com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+            android:id="@+id/list_movie_sub_sort"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="60dp"
+            >
+
+    </com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+-->
+    <ImageView
+            android:id="@+id/img_prefe_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="380dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/system_vertical_div"
+            />
+    <!--
+    <com.imax.ipt.ui.layout.MenuView
+        android:id="@+id/menuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="90dip"
+        android:background="@drawable/shape_menu"
+        android:minWidth="260dip"
+        android:clickable="true"
+        android:alpha="0.9"
+        android:visibility="gone"
+
+        />
+-->
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/gray_light"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="45sp"
+        />
+
+
+
+<!--     <ScrollView
+        android:id="@+id/scrollViewAnimated"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="340dip"
+        android:background="@drawable/shape_menu"
+        android:visibility="invisible" >
+
+        <RelativeLayout
+            android:id="@+id/layoutSubMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:visibility="gone" >
+        </RelativeLayout>
+    </ScrollView> -->
+
+    <ListView
+        android:id="@+id/checkableMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/img_prefe_div"
+        android:layout_marginRight="2dp"
+        android:layout_alignTop="@id/img_prefe_div"
+        android:listSelector="@drawable/selector_item_menu_background"
+        android:gravity="right"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+
+            >
+    </ListView>
+
+
+    <ListView
+        android:id="@+id/checkableSubMenu"
+        android:layout_width="110dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="230dip"
+        android:background="@drawable/shape_menu"
+        android:dividerHeight="0dp"
+		android:divider="@null"
+        android:visibility="gone" >
+    </ListView>
+
+</RelativeLayout>

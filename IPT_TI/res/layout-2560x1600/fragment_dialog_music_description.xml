@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ipt_gui_asset_bg" >
+
+    <HorizontalScrollView
+        android:layout_width="720dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="10dip" >
+
+        <com.imax.ipt.ui.layout.IPTTextView
+            android:id="@+id/txtMediaTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dip"
+            android:scrollbarStyle="insideInset"
+            android:singleLine="true"
+            android:textAppearance="@style/ActiveText"
+            android:textSize="30pt"
+            />
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dip"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ipt_gui_asset_vert_divider_top" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="500dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/ipt_gui_asset_vert_divider_section" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ipt_gui_asset_vert_divider_bottom" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dip"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ipt_gui_asset_vert_divider_top" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="500dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/ipt_gui_asset_vert_divider_section" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ipt_gui_asset_vert_divider_bottom" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="-5dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_close_button" />
+
+    <ImageView
+        android:id="@+id/imageHighResolution"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="100dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ipt_gui_asset_album_cover_default_large" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtArtist"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="450dip"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@android:color/white"
+        android:textSize="8pt" />
+
+<!--     <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtYear"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="480dip"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:textSize="8pt" /> -->
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtGenre"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="480dip"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@android:color/white"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/btnPlayMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="150dip"
+        android:layout_marginTop="177dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_dialog_play_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dip"
+        android:layout_marginTop="320dip"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:text="@string/play_album"
+        android:textColor="@android:color/white"
+        android:textSize="12pt" />
+
+    <ImageButton
+        android:id="@+id/btnFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="420dip"
+        android:layout_marginTop="100dip"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_favourite_button" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="510dip"
+        android:layout_marginTop="130dip"
+        android:text="@string/favourite"
+        android:textSize="9pt" />
+
+    <ScrollView
+        android:layout_width="430dip"
+        android:layout_height="350dip"
+        android:layout_marginLeft="450dip"
+        android:layout_marginTop="200dip" >
+
+        <LinearLayout
+            android:id="@+id/layouTracks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

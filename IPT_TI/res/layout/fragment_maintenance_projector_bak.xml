@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/mImgLampRight"
+        android:layout_width="269dp"
+        android:layout_height="269dp"
+        android:layout_x="658dp"
+        android:layout_y="140dp"
+        android:src="@drawable/ipt_gui_asset_projector_bulb_icon" />
+
+    <ImageView
+        android:id="@+id/mImgLampLeft"
+        android:layout_width="269dp"
+        android:layout_height="269dp"
+        android:layout_x="920dp"
+        android:layout_y="140dp"
+        android:src="@drawable/ipt_gui_asset_projector_bulb_icon" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1020dp"
+        android:layout_y="154dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/projector_right"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="15pt" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="765dp"
+        android:layout_y="154dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/projector_left"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="15pt" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtLeftProjectorHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="728dp"
+        android:layout_y="470dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="0000/9999"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="15pt" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonLeftProjector"
+        android:layout_width="149dp"
+        android:layout_height="57dp"
+        android:layout_x="722dp"
+        android:layout_y="379dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonRightProjector"
+        android:layout_width="149dp"
+        android:layout_height="57dp"
+        android:layout_x="987dp"
+        android:layout_y="376dp" />
+
+    <com.imax.ipt.ui.layout.IPTTextView
+        android:id="@+id/txtRightProjectorHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="989dp"
+        android:layout_y="470dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="0000/9999"
+        android:textAppearance="@style/smallActiveText"
+        android:textSize="15pt" />
+
+</AbsoluteLayout>

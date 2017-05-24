@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is proper the menu , We have only 1 user interface -->
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/buttonLeftProjector"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="216dp"
+        android:text="@string/maintenance_reboot_left_projector"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/buttonSequence"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="482dp"
+        android:text="@string/maintenance_reboot_sequence"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/buttonAmplifier"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="389dp"
+        android:text="@string/maintenance_reboot_amplifier"
+        android:textSize="10pt"
+        android:visibility="gone"
+         />
+
+    <Button
+        android:id="@+id/buttonRightProjector"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="304dp"
+        android:text="@string/maintenance_reboot_right_projector"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/buttonBranch"
+        android:layout_width="207dp"
+        android:layout_height="63dp"
+        android:layout_x="640dp"
+        android:layout_y="567dp"
+        android:text="@string/maintenance_reboot_branch"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textViewSequenceStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="912dp"
+        android:layout_y="486dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textViewLeftProjectorStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="905dp"
+        android:layout_y="235dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/textViewRightProjectorStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="912dp"
+        android:layout_y="321dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textViewAmplifierStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="916dp"
+        android:layout_y="400dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/textViewBranchStatus"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_x="914dp"
+        android:layout_y="580dp"
+        android:textSize="10pt"
+        android:visibility="gone"
+        />
+    <ImageButton
+        android:id="@+id/btn_turn_on"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_marginTop="600dip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/selector_reboot_button"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/content_btn_on_off" />
+</AbsoluteLayout>

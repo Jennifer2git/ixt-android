@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_deep"
+		>
+	<FrameLayout
+			android:id="@+id/masterMenuLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			>
+	</FrameLayout>
+
+	<!--movie sort-->
+	<FrameLayout
+			android:id="@+id/menuLibraryFragment"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"
+			>
+	</FrameLayout>
+
+
+	<!--
+
+	<com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+			android:id="@+id/list_movie_sort"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="17dp"
+			android:layout_marginLeft="310dp"
+			android:visibility="gone"
+			>
+
+	</com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+
+	<com.imax.ipt.ui.widget.horizontallistview.HorizontalListView
+			android:id="@+id/list_movie_sub_sort"
+			android:layout_width="fill_parent"
+			android:layout_height="150dp"
+			android:layout_marginLeft="50dp"
+			android:layout_marginTop="60dp"
+			android:visibility="gone"
+			>
+
+	</com.imax.ipt.ui.widget.horizontallistview.HorizontalListView>
+-->
+
+	<!-- a,b,c,d,,,z -->
+	<FrameLayout
+			android:id="@+id/alphabetPickerFragment"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_marginTop="80dip"
+			android:layout_marginBottom="10dp"
+			>
+	</FrameLayout>
+
+	<android.support.v4.view.ViewPager
+			android:id="@+id/vp_movie_content"
+			android:layout_width="fill_parent"
+			android:layout_height="740dp"
+			android:layout_marginTop="130dp"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentLeft="true"
+			android:background="@color/gray_light_catalogue"
+			>
+
+	</android.support.v4.view.ViewPager>
+
+	<LinearLayout
+			android:id="@+id/layout_pager_dot"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="630dp"
+			android:orientation="horizontal"
+			android:layout_weight="1"
+			android:divider="@drawable/diver_line"
+			android:showDividers="middle">
+
+		<ImageView
+				android:id="@+id/imge_viewpager_dot1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/selector_viewpager_dot"
+				android:visibility="gone"
+				/>
+		<!--         <ImageView
+				android:id="@+id/imge_viewpager_dot2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/selector_viewpager_dot"
+				android:visibility="visible"/>
+
+		<ImageView
+				android:id="@+id/imge_viewpager_dot3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/selector_viewpager_dot"
+				android:visibility="visible"/>-->
+
+
+	</LinearLayout>
+1390-250
+	<GridView
+			android:id="@+id/grid_movie_item"
+			android:layout_width="1240dp"
+			android:layout_height="576dp"
+			android:layout_marginTop="135dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="10dp"
+			android:layout_marginBottom="60dp"
+			android:numColumns="7"
+			android:columnWidth="30dp"
+			android:visibility="visible"
+			>
+
+	</GridView>
+
+
+	<com.imax.ipt.ui.widget.gridview.TwoWayGridWidget
+			android:id="@+id/gridview"
+			android:layout_width="fill_parent"
+			android:layout_height="510dip"
+			android:layout_marginBottom="100dip"
+			android:layout_marginTop="120dip"
+			android:background="@color/gray_light_catalogue"
+			android:fastScrollEnabled="false"
+			android:focusable="true"
+			android:listSelector="@color/electric_blue"
+			app:cacheColorHint="@android:color/transparent"
+			app:columnWidth="115dip"
+			app:gravity="center"
+			app:numColumns="7"
+			app:numRows="auto_fit"
+			app:rowHeight="170dip"
+			app:scrollDirectionLandscape="horizontal"
+			app:stretchMode="spacingWidthUniform"
+			android:visibility="gone"
+			>
+	</com.imax.ipt.ui.widget.gridview.TwoWayGridWidget>
+
+	<FrameLayout
+			android:id="@+id/searchFragment"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginRight="0dp"
+			android:layout_marginTop="100dp"
+			android:background="@android:color/transparent"
+
+			>
+	</FrameLayout>
+
+	<FrameLayout
+			android:id="@+id/statusNotificationLayout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="25dp"
+			>
+
+	</FrameLayout>
+
+	<FrameLayout
+			android:id="@+id/nowplayingFragment"
+			android:layout_width="match_parent"
+			android:layout_height="90dp"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true"
+	        android:visibility="visible"
+			>
+	</FrameLayout>
+
+
+</RelativeLayout>
